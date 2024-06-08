@@ -30,74 +30,64 @@
       ],
       "files": [
         {
-          "objID": "a74e9cc0-aae1-433b-9072-aa2f9b6ea2ab",
+          "objID": "44210e78-406d-43b7-d70e-a26e40520854",
           "fileName": "screens.h",
           "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
         },
         {
-          "objID": "94e7793a-5f7b-4348-9a3c-a58a65f14303",
+          "objID": "61b9dcbc-eed2-4cfa-fe47-dc847cd172ef",
           "fileName": "screens.c",
-          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"vars.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
         },
         {
-          "objID": "2531665c-9f50-4b0c-9117-493ddd73fdfd",
+          "objID": "c8bfaa74-901f-407f-8696-1fc9d7bece2f",
           "fileName": "actions.h",
           "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
         },
         {
-          "objID": "57f41686-99fc-4da0-e3af-32d5ce44e9f2",
+          "objID": "1b77fca4-c826-473f-b9ea-4c9600e98a71",
           "fileName": "vars.h",
           "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n// enum declarations\r\n\r\n//${eez-studio FLOW_ENUMS}\r\n\r\n// Flow global variables\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n// Native global variables\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
         },
         {
-          "objID": "1c7f1aa5-bea4-440d-bb8c-d836d0991e13",
+          "objID": "8d5ea2a6-0ca4-47d5-d954-7e2f67799b1c",
           "fileName": "structs.h",
-          "template": "#ifndef EEZ_LVGL_UI_STRUCTS_H\n#define EEZ_LVGL_UI_STRUCTS_H\n\n#include <eez/flow/flow.h>\n#include <stdint.h>\n#include <stdbool.h>\n\n#include \"vars.h\"\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n\n#endif /*EEZ_LVGL_UI_STRUCTS_H*/\n"
+          "template": "#ifndef EEZ_LVGL_UI_STRUCTS_H\n#define EEZ_LVGL_UI_STRUCTS_H\n\n//${eez-studio EEZ_FOR_LVGL_CHECK}\n\n#if defined(EEZ_FOR_LVGL)\n\n#include <eez/flow/flow.h>\n#include <stdint.h>\n#include <stdbool.h>\n\n#include \"vars.h\"\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n\n#endif\n\n#endif /*EEZ_LVGL_UI_STRUCTS_H*/\n"
         },
         {
-          "objID": "c38d3bbd-319e-445a-f578-b12b8162d310",
-          "fileName": "flow_def.h",
-          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
-        },
-        {
-          "objID": "801532dc-a878-453b-f085-44426cf628da",
-          "fileName": "flow_def.c",
-          "template": "#include <eez/core/vars.h>\n\n#include \"flow_def.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n"
-        },
-        {
-          "objID": "985a6dbf-174c-4974-b91e-1a2e381b6621",
+          "objID": "04a4439e-1d78-4fe7-90be-013644bf0814",
           "fileName": "images.h",
-          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
         },
         {
-          "objID": "56e614ab-2c7b-4458-a50d-eb2a62fe3ec6",
+          "objID": "592b5203-fbc3-4dad-b636-c5dbff685e79",
           "fileName": "images.c",
           "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
         },
         {
-          "objID": "893bba33-3287-443f-8d8f-b95dff936501",
+          "objID": "1dea85ee-a8bd-41e7-c001-ec0ecf7937d9",
           "fileName": "fonts.h",
-          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
         },
         {
-          "objID": "fd3504dd-f459-45e2-8136-39c2b7174a2b",
+          "objID": "2b90a503-1ba8-475a-dee3-a1e5372dec21",
           "fileName": "styles.h",
           "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
         },
         {
-          "objID": "46e32880-068d-4e69-f49d-21c1bf63361a",
+          "objID": "9fb623be-989a-4805-9dab-6ff5928cc74e",
           "fileName": "styles.c",
           "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
         },
         {
-          "objID": "b1ad0e19-b53a-4cee-b23d-1afbeab49236",
+          "objID": "50c92e0c-f8aa-4ba5-9fdf-ab71b0350538",
           "fileName": "ui.h",
-          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\nvoid ui_init();\nvoid ui_tick();\n\n#ifdef __cplusplus\n}\n#endif\n\n\n#endif // EEZ_LVGL_UI_GUI_H"
+          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n//${eez-studio LVGL_INCLUDE}\n\n//${eez-studio EEZ_FOR_LVGL_CHECK}\n\n#if defined(EEZ_FOR_LVGL)\n#include <eez/flow/lvgl_api.h>\n#endif\n\n#if !defined(EEZ_FOR_LVGL)\n#include \"screens.h\"\n#endif\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n//${eez-studio GUI_ASSETS_DECL}\n\nvoid ui_init();\nvoid ui_tick();\n\n#if !defined(EEZ_FOR_LVGL)\nvoid loadScreen(enum ScreensEnum screenId);\n#endif\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif // EEZ_LVGL_UI_GUI_H"
         },
         {
-          "objID": "1f502eea-9c14-4b71-9920-b859301ba4ff",
+          "objID": "0aad6a93-13be-4b38-ac7c-5c250808d1c2",
           "fileName": "ui.c",
-          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
+          "template": "#if defined(EEZ_FOR_LVGL)\n#include <eez/core/vars.h>\n#endif\n\n#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"actions.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\n#if defined(EEZ_FOR_LVGL)\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n\n#else\n\nstatic int16_t currentScreen = -1;\n\nstatic lv_obj_t *getLvglObjectFromIndex(int32_t index) {\n    if (index == -1) {\n        return 0;\n    }\n    return ((lv_obj_t **)&objects)[index];\n}\n\nstatic const void *getLvglImageByName(const char *name) {\n    for (size_t imageIndex = 0; imageIndex < sizeof(images) / sizeof(ext_img_desc_t); imageIndex++) {\n        if (strcmp(images[imageIndex].name, name) == 0) {\n            return images[imageIndex].img_dsc;\n        }\n    }\n    return 0;\n}\n\nvoid loadScreen(enum ScreensEnum screenId) {\n    currentScreen = screenId - 1;\n    lv_obj_t *screen = getLvglObjectFromIndex(currentScreen);\n    lv_scr_load_anim(screen, LV_SCR_LOAD_ANIM_FADE_IN, 200, 0, false);\n}\n\nvoid ui_init() {\n    create_screens();\n    loadScreen(SCREEN_ID_MAIN);\n}\n\nvoid ui_tick() {\n    tick_screen(currentScreen);\n}\n\n#endif\n"
         }
       ],
       "destinationFolder": "ui",
@@ -115,419 +105,6 @@
     {
       "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
       "components": [
-        {
-          "objID": "c2cd6c5b-ef3e-4294-88a4-0489829422f3",
-          "type": "LVGLPanelWidget",
-          "left": 0,
-          "top": 0,
-          "width": 800,
-          "height": 600,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "px",
-          "heightUnit": "px",
-          "children": [
-            {
-              "objID": "478d0df7-cc92-45a2-ec7c-be2697bcee62",
-              "type": "LVGLButtonWidget",
-              "left": -80,
-              "top": -80,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            }
-          ],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlag": true,
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
-          }
-        },
-        {
-          "objID": "d0a2324d-ca0e-4032-8186-4d3e5555dd9f",
-          "type": "LVGLLabelWidget",
-          "left": 211,
-          "top": 229,
-          "width": 222,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "ESP IDF: 4.4.3",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "e490f460-aa92-4fae-beae-2b2550df634e",
-          "type": "LVGLLabelWidget",
-          "left": 250,
-          "top": 159,
-          "width": 147,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "LVGL: 8.3",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "7ead4afa-1930-4f23-be3e-8966075d1728",
-          "type": "LVGLLabelWidget",
-          "left": 106,
-          "top": 75,
-          "width": 432,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "with flow support enabled",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "7d884a9e-e15e-4fa6-c4d0-5b08f8b11836",
-          "type": "LVGLLabelWidget",
-          "left": 72,
-          "top": 383,
-          "width": 499,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "eez-open/esp32-lvgl-eez-demo",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "fa8927eb-76c0-4f70-a757-460bc1b45b5b",
-          "type": "LVGLLabelWidget",
-          "left": 194,
-          "top": 194,
-          "width": 258,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "Platform: ESP32",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "76b65609-2686-441c-b4f9-ac52d4f14712",
-          "type": "LVGLLabelWidget",
-          "left": 90,
-          "top": 40,
-          "width": 465,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "EEZ Studio LVGL GUI builder",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "8511ed67-27c6-45a3-edbb-b395cbe1131b",
-          "type": "LVGLLabelWidget",
-          "left": 166,
-          "top": 282,
-          "width": 311,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "Inkplate (Soldered)",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
         {
           "objID": "e1aa1617-69a1-4ec1-91fb-ae1a189bacc0",
           "type": "StartActionComponent",
@@ -661,6 +238,455 @@
               "delay": 0
             }
           ]
+        },
+        {
+          "objID": "52d2d58f-8e5f-fb40-59fb-cc4f4be13b0e",
+          "type": "LVGLScreenWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 600,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "c490d592-e3cc-0e0f-dae5-963485c38785",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [
+            {
+              "objID": "c2cd6c5b-ef3e-4294-88a4-0489829422f3",
+              "type": "LVGLPanelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 600,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "locked": false,
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "px",
+              "heightUnit": "px",
+              "children": [
+                {
+                  "objID": "478d0df7-cc92-45a2-ec7c-be2697bcee62",
+                  "type": "LVGLButtonWidget",
+                  "left": -80,
+                  "top": -80,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
+              }
+            },
+            {
+              "objID": "d0a2324d-ca0e-4032-8186-4d3e5555dd9f",
+              "type": "LVGLLabelWidget",
+              "left": 211,
+              "top": 229,
+              "width": 222,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "locked": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_32",
+                      "text_color": "#000000"
+                    }
+                  }
+                }
+              },
+              "text": "ESP IDF: 4.4.3",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "e490f460-aa92-4fae-beae-2b2550df634e",
+              "type": "LVGLLabelWidget",
+              "left": 250,
+              "top": 159,
+              "width": 147,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "locked": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_32",
+                      "text_color": "#000000"
+                    }
+                  }
+                }
+              },
+              "text": "LVGL: 8.3",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "7ead4afa-1930-4f23-be3e-8966075d1728",
+              "type": "LVGLLabelWidget",
+              "left": 106,
+              "top": 75,
+              "width": 432,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "locked": false,
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_color": "#000000",
+                      "text_font": "MONTSERRAT_32"
+                    }
+                  }
+                }
+              },
+              "text": "with flow support enabled",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "7d884a9e-e15e-4fa6-c4d0-5b08f8b11836",
+              "type": "LVGLLabelWidget",
+              "left": 72,
+              "top": 383,
+              "width": 499,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_color": "#000000",
+                      "text_font": "MONTSERRAT_32"
+                    }
+                  }
+                }
+              },
+              "text": "eez-open/esp32-lvgl-eez-demo",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "fa8927eb-76c0-4f70-a757-460bc1b45b5b",
+              "type": "LVGLLabelWidget",
+              "left": 194,
+              "top": 194,
+              "width": 258,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_font": "MONTSERRAT_32",
+                      "text_color": "#000000"
+                    }
+                  }
+                }
+              },
+              "text": "Platform: ESP32",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "76b65609-2686-441c-b4f9-ac52d4f14712",
+              "type": "LVGLLabelWidget",
+              "left": 90,
+              "top": 40,
+              "width": 465,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_color": "#000000",
+                      "text_font": "MONTSERRAT_32"
+                    }
+                  }
+                }
+              },
+              "text": "EEZ Studio LVGL GUI builder",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            },
+            {
+              "objID": "8511ed67-27c6-45a3-edbb-b395cbe1131b",
+              "type": "LVGLLabelWidget",
+              "left": 166,
+              "top": 282,
+              "width": 311,
+              "height": 35,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "content",
+              "heightUnit": "content",
+              "children": [],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                "definition": {
+                  "MAIN": {
+                    "DEFAULT": {
+                      "text_color": "#000000",
+                      "text_font": "MONTSERRAT_32"
+                    }
+                  }
+                }
+              },
+              "text": "Inkplate (Soldered)",
+              "textType": "literal",
+              "longMode": "WRAP",
+              "recolor": false
+            }
+          ],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "d85f7918-8d74-5d2f-bbb3-6077531af562"
+          }
         }
       ],
       "connectionLines": [
@@ -741,17 +767,14 @@
       "left": 0,
       "top": 0,
       "width": 800,
-      "height": 600,
-      "lvglLocalStyles": {
-        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
-      }
+      "height": 600
     },
     {
       "objID": "8354ba2b-f479-4b0a-9a9d-f47987ece63c",
       "components": [
         {
-          "objID": "68062285-7c65-46c2-f088-b4a77842bce4",
-          "type": "LVGLPanelWidget",
+          "objID": "c540a85d-36b3-ef38-9d64-03d80ec0cd2b",
+          "type": "LVGLScreenWidget",
           "left": 0,
           "top": 0,
           "width": 800,
@@ -759,13 +782,11 @@
           "customInputs": [],
           "customOutputs": [],
           "style": {
-            "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
+            "objID": "5f2a2a38-de77-d879-ed32-2e9cc9828a2f",
             "useStyle": "default",
             "conditionalStyles": [],
             "childStyles": []
           },
-          "locked": false,
-          "hiddenInEditor": false,
           "timeline": [],
           "eventHandlers": [],
           "leftUnit": "px",
@@ -774,590 +795,16 @@
           "heightUnit": "px",
           "children": [
             {
-              "objID": "2df74335-5093-4c1b-8beb-6419556cdd96",
-              "type": "LVGLButtonWidget",
-              "left": -80,
-              "top": -80,
-              "width": 640,
-              "height": 440,
+              "objID": "68062285-7c65-46c2-f088-b4a77842bce4",
+              "type": "LVGLPanelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 600,
               "customInputs": [],
               "customOutputs": [],
               "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "5f212a7f-a516-4d09-e30e-0fdf3fb2b48c",
-              "type": "LVGLButtonWidget",
-              "left": -30,
-              "top": -30,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            }
-          ],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlag": true,
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
-          }
-        },
-        {
-          "objID": "e5728464-6d3a-48e7-c3bc-1fdc2bb96142",
-          "type": "LVGLLabelWidget",
-          "left": 261,
-          "top": 271,
-          "width": 222,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "ESP IDF: 4.4.3",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "2d4c7d84-5d9a-4b13-fbf7-cbc563de9aa2",
-          "type": "LVGLLabelWidget",
-          "left": 300,
-          "top": 201,
-          "width": 147,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "LVGL: 8.3",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "63c58854-0d12-4954-a162-2751d90b37b0",
-          "type": "LVGLLabelWidget",
-          "left": 156,
-          "top": 117,
-          "width": 432,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "with flow support enabled",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "f80709a3-dbd5-4594-b245-c18aa52ddf4e",
-          "type": "LVGLLabelWidget",
-          "left": 122,
-          "top": 425,
-          "width": 499,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "eez-open/esp32-lvgl-eez-demo",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "4a535b79-6ef5-4b60-cfd3-015084850f00",
-          "type": "LVGLLabelWidget",
-          "left": 244,
-          "top": 236,
-          "width": 258,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_font": "MONTSERRAT_32",
-                  "text_color": "#000000"
-                }
-              }
-            }
-          },
-          "text": "Platform: ESP32",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "ac5e589c-2416-4f5a-abea-7024039d1e64",
-          "type": "LVGLLabelWidget",
-          "left": 140,
-          "top": 82,
-          "width": 465,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "EEZ Studio LVGL GUI builder",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        },
-        {
-          "objID": "f4172d66-208e-4b12-e9ee-ce2a62c56014",
-          "type": "LVGLLabelWidget",
-          "left": 216,
-          "top": 324,
-          "width": 311,
-          "height": 35,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "content",
-          "heightUnit": "content",
-          "children": [],
-          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-          "hiddenFlagType": "literal",
-          "clickableFlagType": "literal",
-          "scrollbarMode": "auto",
-          "scrollDirection": "all",
-          "checkedStateType": "literal",
-          "disabledStateType": "literal",
-          "states": "",
-          "localStyles": {
-            "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-            "definition": {
-              "MAIN": {
-                "DEFAULT": {
-                  "text_color": "#000000",
-                  "text_font": "MONTSERRAT_32"
-                }
-              }
-            }
-          },
-          "text": "Inkplate (Soldered)",
-          "textType": "literal",
-          "longMode": "WRAP",
-          "recolor": false
-        }
-      ],
-      "connectionLines": [],
-      "localVariables": [
-        {
-          "objID": "6add51ce-46cf-450a-9a65-ad5dd51e1ace",
-          "name": "counter",
-          "type": "integer",
-          "defaultValue": "0",
-          "persistent": false
-        }
-      ],
-      "name": "Page1",
-      "left": 0,
-      "top": 0,
-      "width": 800,
-      "height": 600,
-      "lvglLocalStyles": {
-        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
-      }
-    },
-    {
-      "objID": "e4f0c197-29e7-47dd-bb88-4d3f04b9128b",
-      "components": [
-        {
-          "objID": "91e96584-013c-4fd4-f307-4c001ae80f8e",
-          "type": "LVGLPanelWidget",
-          "left": 0,
-          "top": 0,
-          "width": 800,
-          "height": 600,
-          "customInputs": [],
-          "customOutputs": [],
-          "style": {
-            "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
-            "useStyle": "default",
-            "conditionalStyles": [],
-            "childStyles": []
-          },
-          "locked": false,
-          "hiddenInEditor": false,
-          "timeline": [],
-          "eventHandlers": [],
-          "leftUnit": "px",
-          "topUnit": "px",
-          "widthUnit": "px",
-          "heightUnit": "px",
-          "children": [
-            {
-              "objID": "56d2ae6b-136a-49b5-9736-0cae84ab618e",
-              "type": "LVGLButtonWidget",
-              "left": -80,
-              "top": -80,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "1605ef86-ff57-4f74-db0b-a4c57da1a66a",
-              "type": "LVGLButtonWidget",
-              "left": -30,
-              "top": -30,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "2fdddaaf-9668-4945-f5ad-f7d8eea17d83",
-              "type": "LVGLButtonWidget",
-              "left": 20,
-              "top": 20,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
                 "useStyle": "default",
                 "conditionalStyles": [],
                 "childStyles": []
@@ -1370,8 +817,101 @@
               "topUnit": "px",
               "widthUnit": "px",
               "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "children": [
+                {
+                  "objID": "2df74335-5093-4c1b-8beb-6419556cdd96",
+                  "type": "LVGLButtonWidget",
+                  "left": -80,
+                  "top": -80,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "5f212a7f-a516-4d09-e30e-0fdf3fb2b48c",
+                  "type": "LVGLButtonWidget",
+                  "left": -30,
+                  "top": -30,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
@@ -1381,24 +921,14 @@
               "disabledStateType": "literal",
               "states": "",
               "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
+                "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
               }
             },
             {
-              "objID": "fd799336-0d87-4d3f-8eec-f3df9e7a07e6",
+              "objID": "e5728464-6d3a-48e7-c3bc-1fdc2bb96142",
               "type": "LVGLLabelWidget",
-              "left": 288,
-              "top": 297,
+              "left": 261,
+              "top": 271,
               "width": 222,
               "height": 35,
               "customInputs": [],
@@ -1442,10 +972,10 @@
               "recolor": false
             },
             {
-              "objID": "6995a439-d217-49c1-a6ab-5528d3566cc9",
+              "objID": "2d4c7d84-5d9a-4b13-fbf7-cbc563de9aa2",
               "type": "LVGLLabelWidget",
-              "left": 327,
-              "top": 227,
+              "left": 300,
+              "top": 201,
               "width": 147,
               "height": 35,
               "customInputs": [],
@@ -1489,10 +1019,10 @@
               "recolor": false
             },
             {
-              "objID": "8a3378da-8ec9-4ae9-d84d-8f16141f8861",
+              "objID": "63c58854-0d12-4954-a162-2751d90b37b0",
               "type": "LVGLLabelWidget",
-              "left": 183,
-              "top": 143,
+              "left": 156,
+              "top": 117,
               "width": 432,
               "height": 35,
               "customInputs": [],
@@ -1537,10 +1067,10 @@
               "recolor": false
             },
             {
-              "objID": "c96426ec-92d0-4d4a-d19b-123f483c89e1",
+              "objID": "f80709a3-dbd5-4594-b245-c18aa52ddf4e",
               "type": "LVGLLabelWidget",
-              "left": 149,
-              "top": 451,
+              "left": 122,
+              "top": 425,
               "width": 499,
               "height": 35,
               "customInputs": [],
@@ -1584,10 +1114,10 @@
               "recolor": false
             },
             {
-              "objID": "4c960c1d-a830-4fc0-8a25-b2cc46b596e7",
+              "objID": "4a535b79-6ef5-4b60-cfd3-015084850f00",
               "type": "LVGLLabelWidget",
-              "left": 271,
-              "top": 262,
+              "left": 244,
+              "top": 236,
               "width": 258,
               "height": 35,
               "customInputs": [],
@@ -1630,10 +1160,10 @@
               "recolor": false
             },
             {
-              "objID": "abb9ceaf-6b30-44da-ea0b-b85f185bf6ad",
+              "objID": "ac5e589c-2416-4f5a-abea-7024039d1e64",
               "type": "LVGLLabelWidget",
-              "left": 167,
-              "top": 108,
+              "left": 140,
+              "top": 82,
               "width": 465,
               "height": 35,
               "customInputs": [],
@@ -1677,10 +1207,10 @@
               "recolor": false
             },
             {
-              "objID": "14b76789-0790-4a14-ae00-285d15d95693",
+              "objID": "f4172d66-208e-4b12-e9ee-ce2a62c56014",
               "type": "LVGLLabelWidget",
-              "left": 243,
-              "top": 350,
+              "left": 216,
+              "top": 324,
               "width": 311,
               "height": 35,
               "customInputs": [],
@@ -1734,7 +1264,569 @@
           "disabledStateType": "literal",
           "states": "",
           "localStyles": {
-            "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
+            "objID": "2a0c270b-1133-c34b-0505-f319ea983264"
+          }
+        }
+      ],
+      "connectionLines": [],
+      "localVariables": [
+        {
+          "objID": "6add51ce-46cf-450a-9a65-ad5dd51e1ace",
+          "name": "counter",
+          "type": "integer",
+          "defaultValue": "0",
+          "persistent": false
+        }
+      ],
+      "name": "Page1",
+      "left": 0,
+      "top": 0,
+      "width": 800,
+      "height": 600
+    },
+    {
+      "objID": "e4f0c197-29e7-47dd-bb88-4d3f04b9128b",
+      "components": [
+        {
+          "objID": "68473c47-d0d1-acfe-5fc2-4edeb12c500b",
+          "type": "LVGLScreenWidget",
+          "left": 0,
+          "top": 0,
+          "width": 800,
+          "height": 600,
+          "customInputs": [],
+          "customOutputs": [],
+          "style": {
+            "objID": "eb8790ad-9ddb-4d83-3c0e-7e0dd2e156da",
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
+          },
+          "timeline": [],
+          "eventHandlers": [],
+          "leftUnit": "px",
+          "topUnit": "px",
+          "widthUnit": "px",
+          "heightUnit": "px",
+          "children": [
+            {
+              "objID": "91e96584-013c-4fd4-f307-4c001ae80f8e",
+              "type": "LVGLPanelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 600,
+              "customInputs": [],
+              "customOutputs": [],
+              "style": {
+                "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
+              },
+              "locked": false,
+              "hiddenInEditor": false,
+              "timeline": [],
+              "eventHandlers": [],
+              "leftUnit": "px",
+              "topUnit": "px",
+              "widthUnit": "px",
+              "heightUnit": "px",
+              "children": [
+                {
+                  "objID": "56d2ae6b-136a-49b5-9736-0cae84ab618e",
+                  "type": "LVGLButtonWidget",
+                  "left": -80,
+                  "top": -80,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "1605ef86-ff57-4f74-db0b-a4c57da1a66a",
+                  "type": "LVGLButtonWidget",
+                  "left": -30,
+                  "top": -30,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "2fdddaaf-9668-4945-f5ad-f7d8eea17d83",
+                  "type": "LVGLButtonWidget",
+                  "left": 20,
+                  "top": 20,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "fd799336-0d87-4d3f-8eec-f3df9e7a07e6",
+                  "type": "LVGLLabelWidget",
+                  "left": 288,
+                  "top": 297,
+                  "width": 222,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "ESP IDF: 4.4.3",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "6995a439-d217-49c1-a6ab-5528d3566cc9",
+                  "type": "LVGLLabelWidget",
+                  "left": 327,
+                  "top": 227,
+                  "width": 147,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "LVGL: 8.3",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "8a3378da-8ec9-4ae9-d84d-8f16141f8861",
+                  "type": "LVGLLabelWidget",
+                  "left": 183,
+                  "top": 143,
+                  "width": 432,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "with flow support enabled",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "c96426ec-92d0-4d4a-d19b-123f483c89e1",
+                  "type": "LVGLLabelWidget",
+                  "left": 149,
+                  "top": 451,
+                  "width": 499,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "eez-open/esp32-lvgl-eez-demo",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "4c960c1d-a830-4fc0-8a25-b2cc46b596e7",
+                  "type": "LVGLLabelWidget",
+                  "left": 271,
+                  "top": 262,
+                  "width": 258,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "Platform: ESP32",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "abb9ceaf-6b30-44da-ea0b-b85f185bf6ad",
+                  "type": "LVGLLabelWidget",
+                  "left": 167,
+                  "top": 108,
+                  "width": 465,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "EEZ Studio LVGL GUI builder",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "14b76789-0790-4a14-ae00-285d15d95693",
+                  "type": "LVGLLabelWidget",
+                  "left": 243,
+                  "top": 350,
+                  "width": 311,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "Inkplate (Soldered)",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                }
+              ],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "hiddenFlagType": "literal",
+              "clickableFlag": true,
+              "clickableFlagType": "literal",
+              "scrollbarMode": "auto",
+              "scrollDirection": "all",
+              "checkedStateType": "literal",
+              "disabledStateType": "literal",
+              "states": "",
+              "localStyles": {
+                "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
+              }
+            }
+          ],
+          "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+          "hiddenFlagType": "literal",
+          "clickableFlag": true,
+          "clickableFlagType": "literal",
+          "scrollbarMode": "auto",
+          "scrollDirection": "all",
+          "checkedStateType": "literal",
+          "disabledStateType": "literal",
+          "states": "",
+          "localStyles": {
+            "objID": "bfc63ae5-0cb1-abe3-b04e-92cfdde9ced7"
           }
         }
       ],
@@ -1752,17 +1844,14 @@
       "left": 0,
       "top": 0,
       "width": 800,
-      "height": 600,
-      "lvglLocalStyles": {
-        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
-      }
+      "height": 600
     },
     {
       "objID": "c2ca700c-405a-464c-c301-afa20cffd76c",
       "components": [
         {
-          "objID": "bd15428d-76a6-4edc-f123-1b5bb90f4354",
-          "type": "LVGLPanelWidget",
+          "objID": "83f3c645-6632-f619-c937-e026f8a623d3",
+          "type": "LVGLScreenWidget",
           "left": 0,
           "top": 0,
           "width": 800,
@@ -1770,13 +1859,11 @@
           "customInputs": [],
           "customOutputs": [],
           "style": {
-            "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
+            "objID": "99743275-719b-6e29-e732-55a2d6c2e8f8",
             "useStyle": "default",
             "conditionalStyles": [],
             "childStyles": []
           },
-          "locked": false,
-          "hiddenInEditor": false,
           "timeline": [],
           "eventHandlers": [],
           "leftUnit": "px",
@@ -1785,108 +1872,16 @@
           "heightUnit": "px",
           "children": [
             {
-              "objID": "866c9e36-abb0-402d-e91e-42d4710d7dde",
-              "type": "LVGLButtonWidget",
-              "left": -80,
-              "top": -80,
-              "width": 640,
-              "height": 440,
+              "objID": "bd15428d-76a6-4edc-f123-1b5bb90f4354",
+              "type": "LVGLPanelWidget",
+              "left": 0,
+              "top": 0,
+              "width": 800,
+              "height": 600,
               "customInputs": [],
               "customOutputs": [],
               "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "7b776726-7049-4740-caa3-8c4ad3ee4af4",
-              "type": "LVGLButtonWidget",
-              "left": -30,
-              "top": -30,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "01b45bb2-654e-41de-fa0b-2370418c428e",
-              "type": "LVGLButtonWidget",
-              "left": 20,
-              "top": 20,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                "objID": "de77ce86-6cf9-44a2-c5fe-6ebecd30f14a",
                 "useStyle": "default",
                 "conditionalStyles": [],
                 "childStyles": []
@@ -1899,8 +1894,523 @@
               "topUnit": "px",
               "widthUnit": "px",
               "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+              "children": [
+                {
+                  "objID": "866c9e36-abb0-402d-e91e-42d4710d7dde",
+                  "type": "LVGLButtonWidget",
+                  "left": -80,
+                  "top": -80,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "7b776726-7049-4740-caa3-8c4ad3ee4af4",
+                  "type": "LVGLButtonWidget",
+                  "left": -30,
+                  "top": -30,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "01b45bb2-654e-41de-fa0b-2370418c428e",
+                  "type": "LVGLButtonWidget",
+                  "left": 20,
+                  "top": 20,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "b3e7f441-a200-40bd-dc58-b82c962441ff",
+                  "type": "LVGLButtonWidget",
+                  "left": 70,
+                  "top": 75,
+                  "width": 640,
+                  "height": 440,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "px",
+                  "heightUnit": "px",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlag": true,
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "bg_color": "#ffffff",
+                          "radius": 30,
+                          "align": "CENTER",
+                          "border_width": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "objID": "b48cbb8e-aa50-486f-9ca2-f74dee1f1953",
+                  "type": "LVGLLabelWidget",
+                  "left": 337,
+                  "top": 344,
+                  "width": 222,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "ESP IDF: 4.4.3",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "4a10c0f4-da59-485e-9d50-8e90b0d3a4ed",
+                  "type": "LVGLLabelWidget",
+                  "left": 376,
+                  "top": 274,
+                  "width": 147,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "LVGL: 8.3",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "99548c9e-f8dd-4e8c-bf07-168e61d9960d",
+                  "type": "LVGLLabelWidget",
+                  "left": 232,
+                  "top": 190,
+                  "width": 432,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "locked": false,
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "with flow support enabled",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "3159f04a-e734-4c12-8c75-896bdc6c0db9",
+                  "type": "LVGLLabelWidget",
+                  "left": 320,
+                  "top": 309,
+                  "width": 258,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_font": "MONTSERRAT_32",
+                          "text_color": "#000000"
+                        }
+                      }
+                    }
+                  },
+                  "text": "Platform: ESP32",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "f4addc96-caea-4eb4-ce82-da46a08e3bcd",
+                  "type": "LVGLLabelWidget",
+                  "left": 216,
+                  "top": 155,
+                  "width": 465,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "EEZ Studio LVGL GUI builder",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "46e5656b-8ef2-42e7-a5df-bc151b5a7617",
+                  "type": "LVGLLabelWidget",
+                  "left": 292,
+                  "top": 397,
+                  "width": 311,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "Inkplate (Soldered)",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                },
+                {
+                  "objID": "571680e1-464f-4277-f451-f65de3a010d1",
+                  "type": "LVGLLabelWidget",
+                  "left": 198,
+                  "top": 501,
+                  "width": 499,
+                  "height": 35,
+                  "customInputs": [],
+                  "customOutputs": [],
+                  "style": {
+                    "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
+                  },
+                  "hiddenInEditor": false,
+                  "timeline": [],
+                  "eventHandlers": [],
+                  "leftUnit": "px",
+                  "topUnit": "px",
+                  "widthUnit": "content",
+                  "heightUnit": "content",
+                  "children": [],
+                  "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
+                  "hiddenFlagType": "literal",
+                  "clickableFlagType": "literal",
+                  "scrollbarMode": "auto",
+                  "scrollDirection": "all",
+                  "checkedStateType": "literal",
+                  "disabledStateType": "literal",
+                  "states": "",
+                  "localStyles": {
+                    "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
+                    "definition": {
+                      "MAIN": {
+                        "DEFAULT": {
+                          "text_color": "#000000",
+                          "text_font": "MONTSERRAT_32"
+                        }
+                      }
+                    }
+                  },
+                  "text": "eez-open/esp32-lvgl-eez-demo",
+                  "textType": "literal",
+                  "longMode": "WRAP",
+                  "recolor": false
+                }
+              ],
+              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
               "hiddenFlagType": "literal",
               "clickableFlag": true,
               "clickableFlagType": "literal",
@@ -1910,393 +2420,8 @@
               "disabledStateType": "literal",
               "states": "",
               "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
+                "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
               }
-            },
-            {
-              "objID": "b3e7f441-a200-40bd-dc58-b82c962441ff",
-              "type": "LVGLButtonWidget",
-              "left": 70,
-              "top": 75,
-              "width": 640,
-              "height": 440,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a668f16c-fb05-4d7f-f6bf-56ac854eeabc",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "px",
-              "heightUnit": "px",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_ON_FOCUS|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlag": true,
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "d878ed7c-a134-47e5-f87f-a0cf0a6c8e2c",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "bg_color": "#ffffff",
-                      "radius": 30,
-                      "align": "CENTER",
-                      "border_width": 10
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "objID": "b48cbb8e-aa50-486f-9ca2-f74dee1f1953",
-              "type": "LVGLLabelWidget",
-              "left": 337,
-              "top": 344,
-              "width": 222,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_font": "MONTSERRAT_32",
-                      "text_color": "#000000"
-                    }
-                  }
-                }
-              },
-              "text": "ESP IDF: 4.4.3",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "4a10c0f4-da59-485e-9d50-8e90b0d3a4ed",
-              "type": "LVGLLabelWidget",
-              "left": 376,
-              "top": 274,
-              "width": 147,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_font": "MONTSERRAT_32",
-                      "text_color": "#000000"
-                    }
-                  }
-                }
-              },
-              "text": "LVGL: 8.3",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "99548c9e-f8dd-4e8c-bf07-168e61d9960d",
-              "type": "LVGLLabelWidget",
-              "left": 232,
-              "top": 190,
-              "width": 432,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "locked": false,
-              "hiddenInEditor": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_color": "#000000",
-                      "text_font": "MONTSERRAT_32"
-                    }
-                  }
-                }
-              },
-              "text": "with flow support enabled",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "3159f04a-e734-4c12-8c75-896bdc6c0db9",
-              "type": "LVGLLabelWidget",
-              "left": 320,
-              "top": 309,
-              "width": 258,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "82ac45df-a8e9-4ffe-faef-f97242c11ed8",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "ab9efd41-b8a3-4879-82ed-5c01a5e66738",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_font": "MONTSERRAT_32",
-                      "text_color": "#000000"
-                    }
-                  }
-                }
-              },
-              "text": "Platform: ESP32",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "f4addc96-caea-4eb4-ce82-da46a08e3bcd",
-              "type": "LVGLLabelWidget",
-              "left": 216,
-              "top": 155,
-              "width": 465,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "hiddenInEditor": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_color": "#000000",
-                      "text_font": "MONTSERRAT_32"
-                    }
-                  }
-                }
-              },
-              "text": "EEZ Studio LVGL GUI builder",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "46e5656b-8ef2-42e7-a5df-bc151b5a7617",
-              "type": "LVGLLabelWidget",
-              "left": 292,
-              "top": 397,
-              "width": 311,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "hiddenInEditor": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_color": "#000000",
-                      "text_font": "MONTSERRAT_32"
-                    }
-                  }
-                }
-              },
-              "text": "Inkplate (Soldered)",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
-            },
-            {
-              "objID": "571680e1-464f-4277-f451-f65de3a010d1",
-              "type": "LVGLLabelWidget",
-              "left": 198,
-              "top": 501,
-              "width": 499,
-              "height": 35,
-              "customInputs": [],
-              "customOutputs": [],
-              "style": {
-                "objID": "a9bf737e-205d-4003-aae9-0ca3b6710d43",
-                "useStyle": "default",
-                "conditionalStyles": [],
-                "childStyles": []
-              },
-              "hiddenInEditor": false,
-              "timeline": [],
-              "eventHandlers": [],
-              "leftUnit": "px",
-              "topUnit": "px",
-              "widthUnit": "content",
-              "heightUnit": "content",
-              "children": [],
-              "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLLABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
-              "hiddenFlagType": "literal",
-              "clickableFlagType": "literal",
-              "scrollbarMode": "auto",
-              "scrollDirection": "all",
-              "checkedStateType": "literal",
-              "disabledStateType": "literal",
-              "states": "",
-              "localStyles": {
-                "objID": "b70b99db-02c2-420a-cbdf-e6366dc84e67",
-                "definition": {
-                  "MAIN": {
-                    "DEFAULT": {
-                      "text_color": "#000000",
-                      "text_font": "MONTSERRAT_32"
-                    }
-                  }
-                }
-              },
-              "text": "eez-open/esp32-lvgl-eez-demo",
-              "textType": "literal",
-              "longMode": "WRAP",
-              "recolor": false
             }
           ],
           "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -2309,7 +2434,7 @@
           "disabledStateType": "literal",
           "states": "",
           "localStyles": {
-            "objID": "61ac4553-492e-4af4-b3c4-96067ca53b7c"
+            "objID": "e5df53fa-f80e-ff7f-138a-7218b1496af9"
           }
         }
       ],
@@ -2327,10 +2452,7 @@
       "left": 0,
       "top": 0,
       "width": 800,
-      "height": 600,
-      "lvglLocalStyles": {
-        "objID": "e85dbd5d-8325-1629-003b-86fd654ae635"
-      }
+      "height": 600
     }
   ],
   "userWidgets": [],

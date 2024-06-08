@@ -2,6 +2,7 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "vars.h"
 #include "styles.h"
 #include "ui.h"
 
@@ -12,7 +13,7 @@ static void event_handler_cb_main_page_obj1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 0);
+        flowPropagateValue(flowState, 6, 0);
     }
 }
 
@@ -20,7 +21,7 @@ static void event_handler_cb_main_page_obj2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 4, 0);
+        flowPropagateValue(flowState, 8, 0);
     }
 }
 
@@ -28,7 +29,7 @@ static void event_handler_cb_main_page_obj3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 12, 0);
+        flowPropagateValue(flowState, 16, 0);
     }
 }
 
@@ -36,7 +37,7 @@ static void event_handler_cb_ch_voltage_obj4(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 0);
+        flowPropagateValue(flowState, 12, 0);
     }
 }
 
@@ -44,16 +45,18 @@ static void event_handler_cb_ch_voltage_txt_ch2_i(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 4, 0);
+        flowPropagateValue(flowState, 14, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 14, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 4, 3, value, "Failed to assign Text in Textarea widget");
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 14, 3, value, "Failed to assign Text in Textarea widget");
+            }
         }
     }
 }
@@ -62,16 +65,18 @@ static void event_handler_cb_ch_voltage_txt_ch1_i(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 7, 0);
+        flowPropagateValue(flowState, 17, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 7, 1);
+        flowPropagateValue(flowState, 17, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 7, 3, value, "Failed to assign Text in Textarea widget");
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 17, 3, value, "Failed to assign Text in Textarea widget");
+            }
         }
     }
 }
@@ -80,16 +85,18 @@ static void event_handler_cb_ch_voltage_txt_ch1_v(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 10, 0);
+        flowPropagateValue(flowState, 20, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 10, 1);
+        flowPropagateValue(flowState, 20, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 10, 3, value, "Failed to assign Text in Textarea widget");
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 20, 3, value, "Failed to assign Text in Textarea widget");
+            }
         }
     }
 }
@@ -98,7 +105,7 @@ static void event_handler_cb_ch_voltage_obj5(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 11, 0);
+        flowPropagateValue(flowState, 21, 0);
     }
 }
 
@@ -106,11 +113,99 @@ static void event_handler_cb_ch_voltage_obj6(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 13, 0);
+        flowPropagateValue(flowState, 23, 0);
     }
 }
 
 static void event_handler_cb_ch_voltage_txt_ch2_v(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_FOCUSED) {
+        flowPropagateValue(flowState, 25, 0);
+    }
+    if (event == LV_EVENT_DEFOCUSED) {
+        flowPropagateValue(flowState, 25, 1);
+    }
+    if (event == LV_EVENT_VALUE_CHANGED) {
+        lv_obj_t *ta = lv_event_get_target(e);
+        if (tick_value_change_obj != ta) {
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 25, 3, value, "Failed to assign Text in Textarea widget");
+            }
+        }
+    }
+}
+
+static void event_handler_cb_ch_voltage_kbd_setup_voltage(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_CANCEL) {
+        flowPropagateValue(flowState, 26, 0);
+    }
+}
+
+static void event_handler_cb_ch_on_off_page_obj7(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_PRESSED) {
+        flowPropagateValue(flowState, 18, 0);
+    }
+}
+
+static void event_handler_cb_ch_on_off_page_obj8(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_PRESSED) {
+        flowPropagateValue(flowState, 20, 0);
+    }
+}
+
+static void event_handler_cb_ch_on_off_page_obj9(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_PRESSED) {
+        flowPropagateValue(flowState, 26, 0);
+    }
+}
+
+static void event_handler_cb_ch_on_off_page_obj10(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_PRESSED) {
+        flowPropagateValue(flowState, 28, 0);
+    }
+}
+
+static void event_handler_cb_setup_wifi_obj12(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_PRESSED) {
+        flowPropagateValue(flowState, 10, 0);
+    }
+}
+
+static void event_handler_cb_setup_wifi_txt_ssid(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_FOCUSED) {
+        flowPropagateValue(flowState, 14, 0);
+    }
+    if (event == LV_EVENT_DEFOCUSED) {
+        flowPropagateValue(flowState, 14, 1);
+    }
+    if (event == LV_EVENT_VALUE_CHANGED) {
+        lv_obj_t *ta = lv_event_get_target(e);
+        if (tick_value_change_obj != ta) {
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 14, 3, value, "Failed to assign Text in Textarea widget");
+            }
+        }
+    }
+}
+
+static void event_handler_cb_setup_wifi_txt_pass(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
@@ -121,93 +216,11 @@ static void event_handler_cb_ch_voltage_txt_ch2_v(lv_event_t *e) {
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 15, 3, value, "Failed to assign Text in Textarea widget");
-        }
-    }
-}
-
-static void event_handler_cb_ch_voltage_kbd_setup_voltage(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_CANCEL) {
-        flowPropagateValue(flowState, 16, 0);
-    }
-}
-
-static void event_handler_cb_ch_on_off_page_obj7(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 0);
-    }
-}
-
-static void event_handler_cb_ch_on_off_page_obj8(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 4, 0);
-    }
-}
-
-static void event_handler_cb_ch_on_off_page_obj9(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 10, 0);
-    }
-}
-
-static void event_handler_cb_ch_on_off_page_obj10(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 12, 0);
-    }
-}
-
-static void event_handler_cb_setup_wifi_obj12(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 3, 0);
-    }
-}
-
-static void event_handler_cb_setup_wifi_txt_ssid(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 7, 0);
-    }
-    if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 7, 1);
-    }
-    if (event == LV_EVENT_VALUE_CHANGED) {
-        lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
-        if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 7, 3, value, "Failed to assign Text in Textarea widget");
-        }
-    }
-}
-
-static void event_handler_cb_setup_wifi_txt_pass(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
-    if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 8, 0);
-    }
-    if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 8, 1);
-    }
-    if (event == LV_EVENT_VALUE_CHANGED) {
-        lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
-        if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 8, 3, value, "Failed to assign Text in Textarea widget");
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 15, 3, value, "Failed to assign Text in Textarea widget");
+            }
         }
     }
 }
@@ -216,7 +229,7 @@ static void event_handler_cb_setup_wifi_obj13(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 9, 0);
+        flowPropagateValue(flowState, 16, 0);
     }
 }
 
@@ -224,16 +237,18 @@ static void event_handler_cb_setup_bb3_txt_bb3_ip(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 4, 0);
+        flowPropagateValue(flowState, 9, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 9, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
-        const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 4, 3, value, "Failed to assign Text in Textarea widget");
+            const char *value = lv_textarea_get_text(ta);
+            if (tick_value_change_obj != ta) {
+                assignStringProperty(flowState, 9, 3, value, "Failed to assign Text in Textarea widget");
+            }
         }
     }
 }
@@ -242,7 +257,7 @@ static void event_handler_cb_setup_bb3_obj14(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 5, 0);
+        flowPropagateValue(flowState, 10, 0);
     }
 }
 
@@ -407,7 +422,7 @@ void create_screen_main_page() {
 void tick_screen_main_page() {
     void *flowState = getFlowState(0, 0);
     {
-        bool new_val = evalBooleanProperty(flowState, 0, 3, "Failed to evaluate Hidden flag");
+        bool new_val = evalBooleanProperty(flowState, 5, 3, "Failed to evaluate Hidden flag");
         bool cur_val = lv_obj_has_flag(objects.obj0, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj0;
@@ -417,7 +432,7 @@ void tick_screen_main_page() {
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 2, 3, "Failed to evaluate Hidden flag");
+        bool new_val = evalBooleanProperty(flowState, 6, 3, "Failed to evaluate Hidden flag");
         bool cur_val = lv_obj_has_flag(objects.obj1, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj1;
@@ -427,7 +442,7 @@ void tick_screen_main_page() {
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 12, 3, "Failed to evaluate Hidden flag");
+        bool new_val = evalBooleanProperty(flowState, 16, 3, "Failed to evaluate Hidden flag");
         bool cur_val = lv_obj_has_flag(objects.obj3, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj3;
@@ -641,7 +656,7 @@ void create_screen_ch_voltage() {
 void tick_screen_ch_voltage() {
     void *flowState = getFlowState(0, 1);
     {
-        const char *new_val = evalTextProperty(flowState, 4, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 14, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch2_i);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch2_i;
@@ -650,7 +665,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 17, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch1_i);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch1_i;
@@ -659,7 +674,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 10, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 20, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch1_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch1_v;
@@ -668,7 +683,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 15, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 25, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch2_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch2_v;
@@ -919,7 +934,7 @@ void create_screen_ch_on_off_page() {
 void tick_screen_ch_on_off_page() {
     void *flowState = getFlowState(0, 2);
     {
-        const char *new_val = evalTextProperty(flowState, 6, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 22, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch1_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch1_v;
@@ -928,7 +943,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 23, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch1_a);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch1_a;
@@ -937,7 +952,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 24, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch2_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch2_v;
@@ -946,7 +961,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 9, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 25, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch2_a);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch2_a;
@@ -955,7 +970,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 14, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 30, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.obj11);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj11;
@@ -1138,7 +1153,7 @@ void create_screen_setup_wifi() {
 void tick_screen_setup_wifi() {
     void *flowState = getFlowState(0, 3);
     {
-        const char *new_val = evalTextProperty(flowState, 2, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 9, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_conn_status);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_conn_status;
@@ -1147,7 +1162,7 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 3, 3, "Failed to evaluate Hidden flag");
+        bool new_val = evalBooleanProperty(flowState, 10, 3, "Failed to evaluate Hidden flag");
         bool cur_val = lv_obj_has_flag(objects.obj12, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
             tick_value_change_obj = objects.obj12;
@@ -1157,7 +1172,7 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 14, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ssid);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ssid;
@@ -1166,7 +1181,7 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 15, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_pass);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_pass;
@@ -1175,7 +1190,7 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 13, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 20, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_conn_status__1_);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_conn_status__1_;
@@ -1322,7 +1337,7 @@ void create_screen_setup_bb3() {
 void tick_screen_setup_bb3() {
     void *flowState = getFlowState(0, 4);
     {
-        const char *new_val = evalTextProperty(flowState, 4, 3, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 9, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_bb3_ip);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_bb3_ip;
@@ -1331,7 +1346,7 @@ void tick_screen_setup_bb3() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 13, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.obj15);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.obj15;

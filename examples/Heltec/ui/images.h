@@ -1,11 +1,11 @@
 #ifndef EEZ_LVGL_UI_IMAGES_H
 #define EEZ_LVGL_UI_IMAGES_H
 
+#include <lvgl/lvgl.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <lvgl/lvgl.h>
 
 
 #ifndef EXT_IMG_DESC_T
