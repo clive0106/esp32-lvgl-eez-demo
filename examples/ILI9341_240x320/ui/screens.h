@@ -13,22 +13,6 @@ typedef struct _objects_t {
     lv_obj_t *ch_on_off_page;
     lv_obj_t *setup_wifi;
     lv_obj_t *setup_bb3;
-    lv_obj_t *_obj_button_1;
-    lv_obj_t *_obj_button_10;
-    lv_obj_t *_obj_button_12;
-    lv_obj_t *_obj_button_13;
-    lv_obj_t *_obj_button_14;
-    lv_obj_t *_obj_button_2;
-    lv_obj_t *_obj_button_3;
-    lv_obj_t *_obj_button_4;
-    lv_obj_t *_obj_button_5;
-    lv_obj_t *_obj_button_6;
-    lv_obj_t *_obj_button_7;
-    lv_obj_t *_obj_button_8;
-    lv_obj_t *_obj_button_9;
-    lv_obj_t *_obj_label_11;
-    lv_obj_t *_obj_label_15;
-    lv_obj_t *_obj_spinner_0;
     lv_obj_t *kbd_setup_bb3;
     lv_obj_t *kbd_setup_voltage;
     lv_obj_t *kbd_setup_wifi;
@@ -39,7 +23,23 @@ typedef struct _objects_t {
     lv_obj_t *lbl_ch2_status;
     lv_obj_t *lbl_ch2_v;
     lv_obj_t *lbl_conn_status;
-    lv_obj_t *lbl_conn_status_1;
+    lv_obj_t *lbl_conn_status__1_;
+    lv_obj_t *obj0;
+    lv_obj_t *obj1;
+    lv_obj_t *obj10;
+    lv_obj_t *obj11;
+    lv_obj_t *obj12;
+    lv_obj_t *obj13;
+    lv_obj_t *obj14;
+    lv_obj_t *obj15;
+    lv_obj_t *obj2;
+    lv_obj_t *obj3;
+    lv_obj_t *obj4;
+    lv_obj_t *obj5;
+    lv_obj_t *obj6;
+    lv_obj_t *obj7;
+    lv_obj_t *obj8;
+    lv_obj_t *obj9;
     lv_obj_t *txt_bb3_ip;
     lv_obj_t *txt_ch1_i;
     lv_obj_t *txt_ch1_v;
@@ -50,6 +50,14 @@ typedef struct _objects_t {
 } objects_t;
 
 extern objects_t objects;
+
+enum ScreensEnum {
+    SCREEN_ID_MAIN_PAGE = 1,
+    SCREEN_ID_CH_VOLTAGE = 2,
+    SCREEN_ID_CH_ON_OFF_PAGE = 3,
+    SCREEN_ID_SETUP_WIFI = 4,
+    SCREEN_ID_SETUP_BB3 = 5,
+};
 
 void create_screen_main_page();
 void tick_screen_main_page();

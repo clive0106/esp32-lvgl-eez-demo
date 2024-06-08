@@ -2,40 +2,41 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "styles.h"
 #include "ui.h"
 
 objects_t objects;
 lv_obj_t *tick_value_change_obj;
 
-static void event_handler_cb_main_page__obj_button_1(lv_event_t *e) {
+static void event_handler_cb_main_page_obj1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 1);
+        flowPropagateValue(flowState, 2, 0);
     }
 }
 
-static void event_handler_cb_main_page__obj_button_2(lv_event_t *e) {
+static void event_handler_cb_main_page_obj2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 4, 0);
     }
 }
 
-static void event_handler_cb_main_page__obj_button_3(lv_event_t *e) {
+static void event_handler_cb_main_page_obj3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 12, 1);
+        flowPropagateValue(flowState, 12, 0);
     }
 }
 
-static void event_handler_cb_ch_voltage__obj_button_4(lv_event_t *e) {
+static void event_handler_cb_ch_voltage_obj4(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 1);
+        flowPropagateValue(flowState, 2, 0);
     }
 }
 
@@ -43,16 +44,16 @@ static void event_handler_cb_ch_voltage_txt_ch2_i(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 4, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 4, 2);
+        flowPropagateValue(flowState, 4, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 4, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 4, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
@@ -61,16 +62,16 @@ static void event_handler_cb_ch_voltage_txt_ch1_i(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 7, 1);
+        flowPropagateValue(flowState, 7, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 7, 2);
+        flowPropagateValue(flowState, 7, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 7, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 7, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
@@ -79,33 +80,33 @@ static void event_handler_cb_ch_voltage_txt_ch1_v(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 10, 1);
+        flowPropagateValue(flowState, 10, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 10, 2);
+        flowPropagateValue(flowState, 10, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 10, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 10, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
 
-static void event_handler_cb_ch_voltage__obj_button_5(lv_event_t *e) {
+static void event_handler_cb_ch_voltage_obj5(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 11, 1);
+        flowPropagateValue(flowState, 11, 0);
     }
 }
 
-static void event_handler_cb_ch_voltage__obj_button_6(lv_event_t *e) {
+static void event_handler_cb_ch_voltage_obj6(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 13, 1);
+        flowPropagateValue(flowState, 13, 0);
     }
 }
 
@@ -113,16 +114,16 @@ static void event_handler_cb_ch_voltage_txt_ch2_v(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 15, 1);
+        flowPropagateValue(flowState, 15, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 15, 2);
+        flowPropagateValue(flowState, 15, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 15, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 15, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
@@ -131,47 +132,47 @@ static void event_handler_cb_ch_voltage_kbd_setup_voltage(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_CANCEL) {
-        flowPropagateValue(flowState, 16, 1);
+        flowPropagateValue(flowState, 16, 0);
     }
 }
 
-static void event_handler_cb_ch_on_off_page__obj_button_7(lv_event_t *e) {
+static void event_handler_cb_ch_on_off_page_obj7(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 2, 1);
+        flowPropagateValue(flowState, 2, 0);
     }
 }
 
-static void event_handler_cb_ch_on_off_page__obj_button_8(lv_event_t *e) {
+static void event_handler_cb_ch_on_off_page_obj8(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 4, 0);
     }
 }
 
-static void event_handler_cb_ch_on_off_page__obj_button_9(lv_event_t *e) {
+static void event_handler_cb_ch_on_off_page_obj9(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 10, 1);
+        flowPropagateValue(flowState, 10, 0);
     }
 }
 
-static void event_handler_cb_ch_on_off_page__obj_button_10(lv_event_t *e) {
+static void event_handler_cb_ch_on_off_page_obj10(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 12, 1);
+        flowPropagateValue(flowState, 12, 0);
     }
 }
 
-static void event_handler_cb_setup_wifi__obj_button_12(lv_event_t *e) {
+static void event_handler_cb_setup_wifi_obj12(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 3, 1);
+        flowPropagateValue(flowState, 3, 0);
     }
 }
 
@@ -179,16 +180,16 @@ static void event_handler_cb_setup_wifi_txt_ssid(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 7, 1);
+        flowPropagateValue(flowState, 7, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 7, 2);
+        flowPropagateValue(flowState, 7, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 7, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 7, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
@@ -197,25 +198,25 @@ static void event_handler_cb_setup_wifi_txt_pass(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 8, 1);
+        flowPropagateValue(flowState, 8, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 8, 2);
+        flowPropagateValue(flowState, 8, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 8, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 8, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
 
-static void event_handler_cb_setup_wifi__obj_button_13(lv_event_t *e) {
+static void event_handler_cb_setup_wifi_obj13(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 9, 1);
+        flowPropagateValue(flowState, 9, 0);
     }
 }
 
@@ -223,25 +224,25 @@ static void event_handler_cb_setup_bb3_txt_bb3_ip(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_FOCUSED) {
-        flowPropagateValue(flowState, 4, 1);
+        flowPropagateValue(flowState, 4, 0);
     }
     if (event == LV_EVENT_DEFOCUSED) {
-        flowPropagateValue(flowState, 4, 2);
+        flowPropagateValue(flowState, 4, 1);
     }
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         const char *value = lv_textarea_get_text(ta);
         if (tick_value_change_obj != ta) {
-            assignStringProperty(flowState, 4, 2, value, "Failed to assign Text in Textarea widget");
+            assignStringProperty(flowState, 4, 3, value, "Failed to assign Text in Textarea widget");
         }
     }
 }
 
-static void event_handler_cb_setup_bb3__obj_button_14(lv_event_t *e) {
+static void event_handler_cb_setup_bb3_obj14(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 5, 1);
+        flowPropagateValue(flowState, 5, 0);
     }
 }
 
@@ -267,7 +268,7 @@ void create_screen_main_page() {
                 lv_obj_t *parent_obj = obj;
                 {
                     lv_obj_t *obj = lv_spinner_create(parent_obj, 1000, 60);
-                    objects._obj_spinner_0 = obj;
+                    objects.obj0 = obj;
                     lv_obj_set_pos(obj, 170, 170);
                     lv_obj_set_size(obj, 50, 50);
                     lv_obj_set_style_arc_opa(obj, 150, LV_PART_INDICATOR | LV_STATE_DEFAULT);
@@ -277,10 +278,10 @@ void create_screen_main_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_1 = obj;
+                    objects.obj1 = obj;
                     lv_obj_set_pos(obj, 93, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_main_page__obj_button_1, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_main_page_obj1, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -304,10 +305,10 @@ void create_screen_main_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_2 = obj;
+                    objects.obj2 = obj;
                     lv_obj_set_pos(obj, -11, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_main_page__obj_button_2, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_main_page_obj2, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -373,10 +374,10 @@ void create_screen_main_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_3 = obj;
+                    objects.obj3 = obj;
                     lv_obj_set_pos(obj, 200, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_main_page__obj_button_3, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_main_page_obj3, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -406,32 +407,32 @@ void create_screen_main_page() {
 void tick_screen_main_page() {
     void *flowState = getFlowState(0, 0);
     {
-        bool new_val = evalBooleanProperty(flowState, 0, 2, "Failed to evaluate Hidden flag");
-        bool cur_val = lv_obj_has_flag(objects._obj_spinner_0, LV_OBJ_FLAG_HIDDEN);
+        bool new_val = evalBooleanProperty(flowState, 0, 3, "Failed to evaluate Hidden flag");
+        bool cur_val = lv_obj_has_flag(objects.obj0, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects._obj_spinner_0;
-            if (new_val) lv_obj_add_flag(objects._obj_spinner_0, LV_OBJ_FLAG_HIDDEN);
-            else lv_obj_clear_flag(objects._obj_spinner_0, LV_OBJ_FLAG_HIDDEN);
+            tick_value_change_obj = objects.obj0;
+            if (new_val) lv_obj_add_flag(objects.obj0, LV_OBJ_FLAG_HIDDEN);
+            else lv_obj_clear_flag(objects.obj0, LV_OBJ_FLAG_HIDDEN);
             tick_value_change_obj = NULL;
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 2, 2, "Failed to evaluate Hidden flag");
-        bool cur_val = lv_obj_has_flag(objects._obj_button_1, LV_OBJ_FLAG_HIDDEN);
+        bool new_val = evalBooleanProperty(flowState, 2, 3, "Failed to evaluate Hidden flag");
+        bool cur_val = lv_obj_has_flag(objects.obj1, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects._obj_button_1;
-            if (new_val) lv_obj_add_flag(objects._obj_button_1, LV_OBJ_FLAG_HIDDEN);
-            else lv_obj_clear_flag(objects._obj_button_1, LV_OBJ_FLAG_HIDDEN);
+            tick_value_change_obj = objects.obj1;
+            if (new_val) lv_obj_add_flag(objects.obj1, LV_OBJ_FLAG_HIDDEN);
+            else lv_obj_clear_flag(objects.obj1, LV_OBJ_FLAG_HIDDEN);
             tick_value_change_obj = NULL;
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 12, 2, "Failed to evaluate Hidden flag");
-        bool cur_val = lv_obj_has_flag(objects._obj_button_3, LV_OBJ_FLAG_HIDDEN);
+        bool new_val = evalBooleanProperty(flowState, 12, 3, "Failed to evaluate Hidden flag");
+        bool cur_val = lv_obj_has_flag(objects.obj3, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects._obj_button_3;
-            if (new_val) lv_obj_add_flag(objects._obj_button_3, LV_OBJ_FLAG_HIDDEN);
-            else lv_obj_clear_flag(objects._obj_button_3, LV_OBJ_FLAG_HIDDEN);
+            tick_value_change_obj = objects.obj3;
+            if (new_val) lv_obj_add_flag(objects.obj3, LV_OBJ_FLAG_HIDDEN);
+            else lv_obj_clear_flag(objects.obj3, LV_OBJ_FLAG_HIDDEN);
             tick_value_change_obj = NULL;
         }
     }
@@ -459,10 +460,10 @@ void create_screen_ch_voltage() {
                 lv_obj_t *parent_obj = obj;
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_4 = obj;
+                    objects.obj4 = obj;
                     lv_obj_set_pos(obj, 95, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage__obj_button_4, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage_obj4, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -549,10 +550,10 @@ void create_screen_ch_voltage() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_5 = obj;
+                    objects.obj5 = obj;
                     lv_obj_set_pos(obj, 200, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage__obj_button_5, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage_obj5, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -573,10 +574,10 @@ void create_screen_ch_voltage() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_6 = obj;
+                    objects.obj6 = obj;
                     lv_obj_set_pos(obj, -11, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage__obj_button_6, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_voltage_obj6, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -640,7 +641,7 @@ void create_screen_ch_voltage() {
 void tick_screen_ch_voltage() {
     void *flowState = getFlowState(0, 1);
     {
-        const char *new_val = evalTextProperty(flowState, 4, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 4, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch2_i);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch2_i;
@@ -649,7 +650,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch1_i);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch1_i;
@@ -658,7 +659,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 10, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 10, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch1_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch1_v;
@@ -667,7 +668,7 @@ void tick_screen_ch_voltage() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 15, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 15, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ch2_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ch2_v;
@@ -699,10 +700,10 @@ void create_screen_ch_on_off_page() {
                 lv_obj_t *parent_obj = obj;
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_7 = obj;
+                    objects.obj7 = obj;
                     lv_obj_set_pos(obj, 21, 9);
                     lv_obj_set_size(obj, 111, 60);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page__obj_button_7, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page_obj7, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS|LV_OBJ_FLAG_CHECKABLE);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -728,10 +729,10 @@ void create_screen_ch_on_off_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_8 = obj;
+                    objects.obj8 = obj;
                     lv_obj_set_pos(obj, 158, 9);
                     lv_obj_set_size(obj, 111, 60);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page__obj_button_8, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page_obj8, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS|LV_OBJ_FLAG_CHECKABLE);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -813,10 +814,10 @@ void create_screen_ch_on_off_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_9 = obj;
+                    objects.obj9 = obj;
                     lv_obj_set_pos(obj, -11, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page__obj_button_9, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page_obj9, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -837,10 +838,10 @@ void create_screen_ch_on_off_page() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_10 = obj;
+                    objects.obj10 = obj;
                     lv_obj_set_pos(obj, 200, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page__obj_button_10, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_ch_on_off_page_obj10, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -861,7 +862,7 @@ void create_screen_ch_on_off_page() {
                 }
                 {
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    objects._obj_label_11 = obj;
+                    objects.obj11 = obj;
                     lv_obj_set_pos(obj, 131, 128);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "");
@@ -918,7 +919,7 @@ void create_screen_ch_on_off_page() {
 void tick_screen_ch_on_off_page() {
     void *flowState = getFlowState(0, 2);
     {
-        const char *new_val = evalTextProperty(flowState, 6, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 6, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch1_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch1_v;
@@ -927,7 +928,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch1_a);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch1_a;
@@ -936,7 +937,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch2_v);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch2_v;
@@ -945,7 +946,7 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 9, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 9, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_ch2_a);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_ch2_a;
@@ -954,11 +955,11 @@ void tick_screen_ch_on_off_page() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 14, 2, "Failed to evaluate Text in Label widget");
-        const char *cur_val = lv_label_get_text(objects._obj_label_11);
+        const char *new_val = evalTextProperty(flowState, 14, 3, "Failed to evaluate Text in Label widget");
+        const char *cur_val = lv_label_get_text(objects.obj11);
         if (strcmp(new_val, cur_val) != 0) {
-            tick_value_change_obj = objects._obj_label_11;
-            lv_label_set_text(objects._obj_label_11, new_val);
+            tick_value_change_obj = objects.obj11;
+            lv_label_set_text(objects.obj11, new_val);
             tick_value_change_obj = NULL;
         }
     }
@@ -994,10 +995,10 @@ void create_screen_setup_wifi() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_12 = obj;
+                    objects.obj12 = obj;
                     lv_obj_set_pos(obj, 201, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_setup_wifi__obj_button_12, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_setup_wifi_obj12, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1068,10 +1069,10 @@ void create_screen_setup_wifi() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_13 = obj;
+                    objects.obj13 = obj;
                     lv_obj_set_pos(obj, -11, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_setup_wifi__obj_button_13, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_setup_wifi_obj13, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1117,7 +1118,7 @@ void create_screen_setup_wifi() {
                 {
                     // lbl_conn_status (1)
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    objects.lbl_conn_status_1 = obj;
+                    objects.lbl_conn_status__1_ = obj;
                     lv_obj_set_pos(obj, 78, 65);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "");
@@ -1137,7 +1138,7 @@ void create_screen_setup_wifi() {
 void tick_screen_setup_wifi() {
     void *flowState = getFlowState(0, 3);
     {
-        const char *new_val = evalTextProperty(flowState, 2, 2, "Failed to evaluate Text in Label widget");
+        const char *new_val = evalTextProperty(flowState, 2, 3, "Failed to evaluate Text in Label widget");
         const char *cur_val = lv_label_get_text(objects.lbl_conn_status);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.lbl_conn_status;
@@ -1146,17 +1147,17 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        bool new_val = evalBooleanProperty(flowState, 3, 2, "Failed to evaluate Hidden flag");
-        bool cur_val = lv_obj_has_flag(objects._obj_button_12, LV_OBJ_FLAG_HIDDEN);
+        bool new_val = evalBooleanProperty(flowState, 3, 3, "Failed to evaluate Hidden flag");
+        bool cur_val = lv_obj_has_flag(objects.obj12, LV_OBJ_FLAG_HIDDEN);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects._obj_button_12;
-            if (new_val) lv_obj_add_flag(objects._obj_button_12, LV_OBJ_FLAG_HIDDEN);
-            else lv_obj_clear_flag(objects._obj_button_12, LV_OBJ_FLAG_HIDDEN);
+            tick_value_change_obj = objects.obj12;
+            if (new_val) lv_obj_add_flag(objects.obj12, LV_OBJ_FLAG_HIDDEN);
+            else lv_obj_clear_flag(objects.obj12, LV_OBJ_FLAG_HIDDEN);
             tick_value_change_obj = NULL;
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 7, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 7, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_ssid);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_ssid;
@@ -1165,7 +1166,7 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_pass);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_pass;
@@ -1174,11 +1175,11 @@ void tick_screen_setup_wifi() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 13, 2, "Failed to evaluate Text in Label widget");
-        const char *cur_val = lv_label_get_text(objects.lbl_conn_status_1);
+        const char *new_val = evalTextProperty(flowState, 13, 3, "Failed to evaluate Text in Label widget");
+        const char *cur_val = lv_label_get_text(objects.lbl_conn_status__1_);
         if (strcmp(new_val, cur_val) != 0) {
-            tick_value_change_obj = objects.lbl_conn_status_1;
-            lv_label_set_text(objects.lbl_conn_status_1, new_val);
+            tick_value_change_obj = objects.lbl_conn_status__1_;
+            lv_label_set_text(objects.lbl_conn_status__1_, new_val);
             tick_value_change_obj = NULL;
         }
     }
@@ -1239,10 +1240,10 @@ void create_screen_setup_bb3() {
                 }
                 {
                     lv_obj_t *obj = lv_btn_create(parent_obj);
-                    objects._obj_button_14 = obj;
+                    objects.obj14 = obj;
                     lv_obj_set_pos(obj, -11, 170);
                     lv_obj_set_size(obj, 100, 50);
-                    lv_obj_add_event_cb(obj, event_handler_cb_setup_bb3__obj_button_14, LV_EVENT_ALL, flowState);
+                    lv_obj_add_event_cb(obj, event_handler_cb_setup_bb3_obj14, LV_EVENT_ALL, flowState);
                     lv_obj_add_flag(obj, LV_OBJ_FLAG_SCROLL_ON_FOCUS);
                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_SCROLLABLE);
                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffd321f3), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -1282,7 +1283,7 @@ void create_screen_setup_bb3() {
                 }
                 {
                     lv_obj_t *obj = lv_label_create(parent_obj);
-                    objects._obj_label_15 = obj;
+                    objects.obj15 = obj;
                     lv_obj_set_pos(obj, 111, 21);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_label_set_text(obj, "");
@@ -1321,7 +1322,7 @@ void create_screen_setup_bb3() {
 void tick_screen_setup_bb3() {
     void *flowState = getFlowState(0, 4);
     {
-        const char *new_val = evalTextProperty(flowState, 4, 2, "Failed to evaluate Text in Textarea widget");
+        const char *new_val = evalTextProperty(flowState, 4, 3, "Failed to evaluate Text in Textarea widget");
         const char *cur_val = lv_textarea_get_text(objects.txt_bb3_ip);
         if (strcmp(new_val, cur_val) != 0) {
             tick_value_change_obj = objects.txt_bb3_ip;
@@ -1330,11 +1331,11 @@ void tick_screen_setup_bb3() {
         }
     }
     {
-        const char *new_val = evalTextProperty(flowState, 8, 2, "Failed to evaluate Text in Label widget");
-        const char *cur_val = lv_label_get_text(objects._obj_label_15);
+        const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Label widget");
+        const char *cur_val = lv_label_get_text(objects.obj15);
         if (strcmp(new_val, cur_val) != 0) {
-            tick_value_change_obj = objects._obj_label_15;
-            lv_label_set_text(objects._obj_label_15, new_val);
+            tick_value_change_obj = objects.obj15;
+            lv_label_set_text(objects.obj15, new_val);
             tick_value_change_obj = NULL;
         }
     }

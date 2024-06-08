@@ -3,7 +3,22 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include <stdio.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// enum declarations
+
+
+
+// Flow global variables
+
+enum FlowGlobalVariables {
+    FLOW_GLOBAL_VARIABLE_NONE
+};
+
+// Native global variables
 
 extern const char *get_var_wifi_ssid();
 extern void set_var_wifi_ssid(const char *value);
@@ -39,21 +54,8 @@ extern const char *get_var_ch2_a();
 extern void set_var_ch2_a(const char *value);
 
 
-extern char WIFI_SSID[];
-extern char WIFI_PASS[];
-extern char WIFI_IP[];
-extern char BB3_IP[];
-extern bool BB3_CONNECTED;
-extern bool WIFI_CONNECTED;
-extern bool SCPI_UPDATED;
-extern bool CH1_UPDATE;
-extern bool CH1_POWER_ON;
-extern bool CH2_UPDATE;
-extern bool CH2_POWER_ON;
-extern char BB3_RESPONSE[];
-extern char CH1_V[];
-extern char CH1_A[];
-extern char CH2_V[];
-extern char CH2_A[];
+#ifdef __cplusplus
+}
+#endif
 
 #endif /*EEZ_LVGL_UI_VARS_H*/

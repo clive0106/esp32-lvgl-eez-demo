@@ -2,6 +2,7 @@
 #include "images.h"
 #include "fonts.h"
 #include "actions.h"
+#include "styles.h"
 #include "ui.h"
 
 objects_t objects;

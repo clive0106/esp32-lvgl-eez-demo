@@ -1,20 +1,24 @@
 {
-  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
   "lvglStyles": {
     "objID": "a31bd004-35c5-b3fb-5c8b-78ea5c7693b8",
     "styles": [],
     "defaultStyles": {}
   },
+  "objID": "6666cd76-f969-5646-9e7b-e39d750cc7d9",
   "settings": {
     "objID": "e007d988-9fba-797d-72e9-efc33ca6d05c",
     "general": {
       "objID": "fd434352-2277-c4a8-e87e-e96cfcbf2305",
       "projectVersion": "v3",
       "projectType": "lvgl",
+      "lvglVersion": "8.3",
+      "extensions": [],
       "imports": [],
       "flowSupport": true,
       "displayWidth": 320,
-      "displayHeight": 240
+      "displayHeight": 240,
+      "colorFormat": "BGR",
+      "resourceFiles": []
     },
     "build": {
       "objID": "72794a43-a0fc-13c2-7eb5-67dd952141a4",
@@ -26,74 +30,74 @@
       ],
       "files": [
         {
-          "objID": "05204dce-0fc5-4c81-b733-2ccc8e6c8671",
+          "objID": "fd85b79f-144e-4c55-ffa4-4b7f05e7ae13",
           "fileName": "screens.h",
           "template": "#ifndef EEZ_LVGL_UI_SCREENS_H\r\n#define EEZ_LVGL_UI_SCREENS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_SCREENS_DECL}\r\n//${eez-studio LVGL_SCREENS_DECL_EXT}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_SCREENS_H*/"
         },
         {
-          "objID": "2212bc5e-cf4a-4a81-c9ab-a671066d086f",
+          "objID": "53e4735b-569d-424c-8f4a-556c89ca9be1",
           "fileName": "screens.c",
-          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
+          "template": "#include \"screens.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n#include \"actions.h\"\n#include \"styles.h\"\n#include \"ui.h\"\n\n//${eez-studio LVGL_SCREENS_DEF}\n//${eez-studio LVGL_SCREENS_DEF_EXT}"
         },
         {
-          "objID": "19d3d573-88a3-4550-f4da-753b61d7f0c4",
+          "objID": "6c26a209-9647-4ebc-f84c-d1bffd5b1ef2",
           "fileName": "actions.h",
-          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_EVENTS_H\r\n#define EEZ_LVGL_UI_EVENTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_ACTIONS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_EVENTS_H*/"
         },
         {
-          "objID": "ddb840d3-2cd4-4c24-897d-1e367e2df75f",
+          "objID": "9efbe1b9-5f47-463d-9d30-d201817bbd3e",
           "fileName": "vars.h",
-          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n#include <stdio.h>\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\nextern char WIFI_SSID[];\r\nextern char WIFI_PASS[];\r\nextern char WIFI_IP[];\r\nextern char BB3_IP[];\r\nextern bool BB3_CONNECTED;\r\nextern bool WIFI_CONNECTED;\r\nextern bool SCPI_UPDATED;\r\nextern bool CH1_UPDATE;\r\nextern bool CH1_POWER_ON;\r\nextern bool CH2_UPDATE;\r\nextern bool CH2_POWER_ON;\r\nextern char BB3_RESPONSE[];\r\nextern char CH1_V[];\r\nextern char CH1_A[];\r\nextern char CH2_V[];\r\nextern char CH2_A[];\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n// enum declarations\r\n\r\n//${eez-studio FLOW_ENUMS}\r\n\r\n// Flow global variables\r\n\r\n//${eez-studio FLOW_GLOBAL_VARIABLES_ENUM}\r\n\r\n// Native global variables\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
         },
         {
-          "objID": "9c770003-b028-4a8b-9447-fea072e67b3a",
+          "objID": "7a6eb9c4-5f56-4e72-8c1d-07b43ad80436",
+          "fileName": "structs.h",
+          "template": "#ifndef EEZ_LVGL_UI_STRUCTS_H\n#define EEZ_LVGL_UI_STRUCTS_H\n\n#include <eez/flow/flow.h>\n#include <stdint.h>\n#include <stdbool.h>\n\n#include \"vars.h\"\n\nusing namespace eez;\n\n//${eez-studio FLOW_STRUCTS}\n\n//${eez-studio FLOW_STRUCT_VALUES}\n\n#endif /*EEZ_LVGL_UI_STRUCTS_H*/\n"
+        },
+        {
+          "objID": "56ea03b6-8b73-40bd-82da-2380cfbadaa9",
           "fileName": "flow_def.h",
-          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_FLOW_DEF_H\n#define EEZ_LVGL_UI_FLOW_DEF_H\n\n#include <stdint.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\n//${eez-studio GUI_ASSETS_DECL_COMPRESSED}\n\n#ifdef __cplusplus\n}\n#endif\n\n#endif /*EEZ_LVGL_UI_FLOW_DEF_H*/"
         },
         {
-          "objID": "0f3ea37c-f0d3-4061-c693-76b52bd9d632",
+          "objID": "0c660731-674e-4038-e912-92066ec6a506",
           "fileName": "flow_def.c",
           "template": "#include <eez/core/vars.h>\n\n#include \"flow_def.h\"\n#include \"vars.h\"\n\n//${eez-studio GUI_ASSETS_DEF_COMPRESSED}\n\n//${eez-studio LVGL_NATIVE_VARS_TABLE_DEF}\n"
         },
         {
-          "objID": "81fa9cb7-33e4-4272-9340-49a50037b327",
+          "objID": "1e211626-72c8-4f7d-d9ba-33f859eb7ec1",
           "fileName": "images.h",
-          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_IMAGES_H\r\n#define EEZ_LVGL_UI_IMAGES_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_IMAGES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_IMAGES_H*/"
         },
         {
-          "objID": "5844b3a8-54b7-4bdf-ff04-d052e689328c",
+          "objID": "775c5136-9d85-44ec-cd5e-8e980ba97d18",
           "fileName": "images.c",
           "template": "#include \"images.h\"\n\n//${eez-studio LVGL_IMAGES_DEF}"
         },
         {
-          "objID": "bad0addd-10de-48f7-e57e-b40fce3e7c45",
+          "objID": "cc9a0d1e-d1c4-43e9-c325-2c66922601be",
           "fileName": "fonts.h",
-          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_FONTS_H\r\n#define EEZ_LVGL_UI_FONTS_H\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n//${eez-studio LVGL_FONTS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_FONTS_H*/"
         },
         {
-          "objID": "c657221f-3727-4bc3-efc3-eefe9dfcb87a",
+          "objID": "8b66caf1-c477-4b9a-bd6b-4f31844fcb70",
           "fileName": "styles.h",
           "template": "#ifndef EEZ_LVGL_UI_STYLES_H\r\n#define EEZ_LVGL_UI_STYLES_H\r\n\r\n//${eez-studio LVGL_INCLUDE}\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_STYLES_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_STYLES_H*/"
         },
         {
-          "objID": "73187da2-898c-440c-f503-02fcee0af7e9",
+          "objID": "bea3689e-47d4-45dc-ceda-9a7c4f2ffbc5",
           "fileName": "styles.c",
           "template": "#include \"styles.h\"\n#include \"images.h\"\n#include \"fonts.h\"\n\n//${eez-studio LVGL_STYLES_DEF}\n"
         },
         {
-          "objID": "9063559c-76c3-4445-d6a4-edef293caf0c",
+          "objID": "dca54b40-a4cd-4ea7-9239-09de13238ef4",
           "fileName": "ui.h",
-          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\nvoid ui_init();\nvoid ui_tick();\n\n#endif // EEZ_LVGL_UI_GUI_H"
+          "template": "#ifndef EEZ_LVGL_UI_GUI_H\n#define EEZ_LVGL_UI_GUI_H\n\n#include <eez/flow/lvgl_api.h>\n\n#ifdef __cplusplus\nextern \"C\" {\n#endif\n\nvoid ui_init();\nvoid ui_tick();\n\n#ifdef __cplusplus\n}\n#endif\n\n\n#endif // EEZ_LVGL_UI_GUI_H"
         },
         {
-          "objID": "5582dcbf-c562-4aac-848d-c284e8419073",
+          "objID": "acdea12f-95b5-422a-c263-af7887c0c8c4",
           "fileName": "ui.c",
-          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}"
-        },
-        {
-          "objID": "d1461368-02f7-4740-9979-0da2b1361827",
-          "fileName": "vars.c",
-          "template": "#include \"vars.h\"\r\n\r\nchar WIFI_SSID[50] = \"W1_1047581318\";\r\nchar WIFI_PASS[50] = \"SunceMojeMalo\";\r\nchar WIFI_IP[20] = \"\";\r\nchar BB3_IP[20] = \"192.168.100.80\";\r\nchar BB3_RESPONSE[500] = \"\";\r\nchar CH1_V[10] = \"0.0000\";\r\nchar CH1_A[10] = \"0.0000\";\r\nchar CH2_V[10] = \"0.0000\";\r\nchar CH2_A[10] = \"0.0000\";\r\nbool BB3_CONNECTED = false;\r\nbool WIFI_CONNECTED = false;\r\nbool SCPI_UPDATED = false;\r\nbool CH1_UPDATE = false;\r\nbool CH1_POWER_ON = false;\r\nbool CH2_UPDATE = false;\r\nbool CH2_POWER_ON = false;\r\n\r\nconst char *get_var_wifi_ssid(){return WIFI_SSID;}\r\nvoid set_var_wifi_ssid(const char *value){sprintf(WIFI_SSID,value);}\r\nconst char *get_var_wifi_pass(){return WIFI_PASS;}\r\nvoid set_var_wifi_pass(const char *value){sprintf(WIFI_PASS,value);}\r\nconst char *get_var_wifi_ip(){return WIFI_IP;}\r\nvoid set_var_wifi_ip(const char *value){}\r\nbool get_var_wifi_connected(){return WIFI_CONNECTED;}\r\nvoid set_var_wifi_connected(bool value){}\r\nconst char *get_var_bb3_ip(){return BB3_IP;}\r\nvoid set_var_bb3_ip(const char *value){sprintf(BB3_IP,value);}\r\nbool get_var_bb3_connected(){return BB3_CONNECTED;}\r\nvoid set_var_bb3_connected(bool value){}\r\nbool get_var_scpi_updated(){return SCPI_UPDATED;}\r\nvoid set_var_scpi_updated(bool value){SCPI_UPDATED = value;printf(\"SCPI_UPDATE: %d\\n\", SCPI_UPDATED);}\r\nbool get_var_ch1_update(){return CH1_UPDATE;}\r\nvoid set_var_ch1_update(bool value){CH1_UPDATE = value;printf(\"CH1_UPDATE: %d\\n\", CH1_UPDATE);}\r\nbool get_var_ch1_power_on(){return CH1_POWER_ON;}\r\nvoid set_var_ch1_power_on(bool value){CH1_POWER_ON = value;printf(\"CH1_POWER_ON: %d\\n\", CH1_POWER_ON);}\r\nbool get_var_ch2_update(){return CH2_UPDATE;}\r\nvoid set_var_ch2_update(bool value){CH2_UPDATE = value;printf(\"CH2_UPDATE: %d\\n\", CH2_UPDATE);}\r\nbool get_var_ch2_power_on(){return CH2_POWER_ON;}\r\nvoid set_var_ch2_power_on(bool value){CH2_POWER_ON = value;printf(\"CH2_POWER_ON: %d\\n\", CH2_POWER_ON);}\r\nconst char *get_var_bb3_response(){return BB3_RESPONSE;}\r\nvoid set_var_bb3_response(const char *value){}\r\nconst char *get_var_ch1_v(){return CH1_V;}\r\nvoid set_var_ch1_v(const char *value){sprintf(CH1_V,value);}\r\nconst char *get_var_ch1_a(){return CH1_A;}\r\nvoid set_var_ch1_a(const char *value){sprintf(CH1_A,value);}\r\nconst char *get_var_ch2_v(){return CH2_V;}\r\nvoid set_var_ch2_v(const char *value){sprintf(CH2_V,value);}\r\nconst char *get_var_ch2_a(){return CH2_A;}\r\nvoid set_var_ch2_a(const char *value){sprintf(CH2_A,value);}"
+          "template": "#include \"ui.h\"\n#include \"screens.h\"\n#include \"images.h\"\n#include \"flow_def.h\"\n#include \"actions.h\"\n\n//${eez-studio LVGL_ACTIONS_ARRAY_DEF}\n\nvoid ui_init() {\n    eez_flow_init(assets, sizeof(assets), (lv_obj_t **)&objects, sizeof(objects), images, sizeof(images), actions);\n}\n\nvoid ui_tick() {\n    eez_flow_tick();\n    tick_screen(g_currentScreen);\n}\n"
         }
       ],
       "destinationFolder": "ui",
@@ -236,7 +240,7 @@
     "enums": []
   },
   "actions": [],
-  "pages": [
+  "userPages": [
     {
       "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
       "components": [
@@ -251,9 +255,12 @@
           "customOutputs": [],
           "style": {
             "objID": "9e8ec68d-f4b5-44a9-85dd-8dfe5e8f5066",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -270,9 +277,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "901249ad-2d45-4385-f143-535817ff1f42",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -303,8 +313,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": []
+              }
             },
             {
               "objID": "ebf960ef-222e-44e2-a1ce-d126d447cdfc",
@@ -317,10 +326,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -337,10 +355,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -366,7 +387,6 @@
                       }
                     }
                   },
-                  "eventHandlers": [],
                   "text": "Setup BB3",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -397,14 +417,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "45673825-853c-4177-9490-5ac1a86b6e95",
@@ -417,10 +430,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -437,10 +459,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -466,7 +491,6 @@
                       }
                     }
                   },
-                  "eventHandlers": [],
                   "text": "Setup WIFI",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -496,14 +520,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "1277ad71-5420-4aea-f2be-42e8552ee33c",
@@ -516,9 +533,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -542,7 +562,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "EEZ Studio LVGL GUI builder",
               "textType": "literal",
               "longMode": "WRAP",
@@ -559,9 +578,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -585,7 +607,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "Flow support enabled",
               "textType": "literal",
               "longMode": "WRAP",
@@ -602,9 +623,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -628,7 +652,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "LVGL: 8.3",
               "textType": "literal",
               "longMode": "WRAP",
@@ -645,9 +668,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -671,7 +697,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "Platform: ESP32",
               "textType": "literal",
               "longMode": "WRAP",
@@ -688,9 +713,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -714,7 +742,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "ESP IDF: 4.4.3",
               "textType": "literal",
               "longMode": "WRAP",
@@ -731,9 +758,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "0e7f902a-1fc0-4f85-edf4-7f5dd395bfc8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -757,7 +787,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "WIFI BB3 controller",
               "textType": "literal",
               "longMode": "WRAP",
@@ -774,10 +803,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -794,10 +832,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -823,7 +864,6 @@
                       }
                     }
                   },
-                  "eventHandlers": [],
                   "text": "Set CH",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -854,14 +894,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             }
           ],
           "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -885,8 +918,7 @@
                 }
               }
             }
-          },
-          "eventHandlers": []
+          }
         },
         {
           "objID": "b56a9d72-138d-4e14-f7ec-159dcd867b10",
@@ -1016,9 +1048,12 @@
           "customOutputs": [],
           "style": {
             "objID": "9e8ec68d-f4b5-44a9-85dd-8dfe5e8f5066",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -1035,10 +1070,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "589c1b98-e093-4adf-d70a-363378eed4e7",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -1055,10 +1099,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -1075,7 +1122,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "GET",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -1105,14 +1151,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "589c1b98-e093-4adf-d70a-363378eed4e7",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "72704806-7fbb-4e53-a35d-208cbbfbff57",
@@ -1125,9 +1164,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "dd909770-6137-4849-d259-320161dbc358",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "d5ed7480-fd55-43a2-b9f0-87466740e51f",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "9e48d55f-247e-4098-dd5b-0cb636d688c6",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_ch2_i",
               "leftUnit": "px",
               "topUnit": "px",
@@ -1155,18 +1208,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "d5ed7480-fd55-43a2-b9f0-87466740e51f",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "9e48d55f-247e-4098-dd5b-0cb636d688c6",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "CH2_A",
               "textType": "expression",
               "placeholder": "",
@@ -1186,9 +1227,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "64cd58e3-965a-41e7-fdcf-6a6baa067107",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -1205,7 +1249,6 @@
               "localStyles": {
                 "objID": "a3c5e087-874a-4ca9-9fb5-e09c174db3dd"
               },
-              "eventHandlers": [],
               "text": "CH2 current",
               "textType": "literal",
               "longMode": "WRAP",
@@ -1222,9 +1265,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "00404cf2-b1ca-478d-a891-47e0b5bda042",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -1241,7 +1287,6 @@
               "localStyles": {
                 "objID": "5edcb3da-5442-481c-9446-fa2b31a94988"
               },
-              "eventHandlers": [],
               "text": "CH1 current",
               "textType": "literal",
               "longMode": "WRAP",
@@ -1258,9 +1303,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "79ce4e40-76a6-44d5-ad3b-9806257ebde3",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "8e48199f-8d04-4d16-b3a4-a7d44aefd881",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "1b20717f-bb3c-445b-b4d5-098a79dea9d8",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_ch1_i",
               "leftUnit": "px",
               "topUnit": "px",
@@ -1288,18 +1347,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "8e48199f-8d04-4d16-b3a4-a7d44aefd881",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "1b20717f-bb3c-445b-b4d5-098a79dea9d8",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "CH1_A",
               "textType": "expression",
               "placeholder": "",
@@ -1319,9 +1366,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "64cd58e3-965a-41e7-fdcf-6a6baa067107",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -1338,7 +1388,6 @@
               "localStyles": {
                 "objID": "a3c5e087-874a-4ca9-9fb5-e09c174db3dd"
               },
-              "eventHandlers": [],
               "text": "CH2 voltage",
               "textType": "literal",
               "longMode": "WRAP",
@@ -1355,9 +1404,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "00404cf2-b1ca-478d-a891-47e0b5bda042",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -1374,7 +1426,6 @@
               "localStyles": {
                 "objID": "5edcb3da-5442-481c-9446-fa2b31a94988"
               },
-              "eventHandlers": [],
               "text": "CH1 voltage",
               "textType": "literal",
               "longMode": "WRAP",
@@ -1391,9 +1442,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "79ce4e40-76a6-44d5-ad3b-9806257ebde3",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "f91873b8-ae54-47d4-97f2-d2fc5a41c95b",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "9e19e2ea-2f0e-49af-cfb1-75b0a6070dcc",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_ch1_v",
               "leftUnit": "px",
               "topUnit": "px",
@@ -1421,18 +1486,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "f91873b8-ae54-47d4-97f2-d2fc5a41c95b",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "9e19e2ea-2f0e-49af-cfb1-75b0a6070dcc",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "CH1_V",
               "textType": "expression",
               "placeholder": "",
@@ -1452,10 +1505,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "1439c7a4-6868-4814-b71a-8dd1d55318c5",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -1472,10 +1534,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -1492,7 +1557,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "SET",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -1522,14 +1586,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "1439c7a4-6868-4814-b71a-8dd1d55318c5",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "5a08bf59-b5ba-49eb-d806-dab0c6f1a519",
@@ -1542,10 +1599,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -1562,10 +1628,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -1582,7 +1651,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Back",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -1612,14 +1680,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "19b9556f-a246-4ab3-b0c5-d15afdfbf4ff",
@@ -1632,9 +1693,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "dd909770-6137-4849-d259-320161dbc358",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "96c68009-a4f8-4b15-9dbe-36e3c8e798c2",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "eb9e847d-576d-44c7-9f97-3d4761da38f2",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_ch2_v",
               "leftUnit": "px",
               "topUnit": "px",
@@ -1662,18 +1737,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "96c68009-a4f8-4b15-9dbe-36e3c8e798c2",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "eb9e847d-576d-44c7-9f97-3d4761da38f2",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "CH2_V",
               "textType": "expression",
               "placeholder": "",
@@ -1693,11 +1756,20 @@
               "customOutputs": [],
               "style": {
                 "objID": "45e6e1be-bbd7-43e6-b31d-ea0bfebbd0ea",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": false,
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "fcd8607d-a1d9-4e62-a4ee-1c89d3ffa001",
+                  "eventName": "CANCEL",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "kbd_setupVoltage",
               "leftUnit": "px",
               "topUnit": "px",
@@ -1739,13 +1811,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "fcd8607d-a1d9-4e62-a4ee-1c89d3ffa001",
-                  "trigger": "CANCEL",
-                  "handlerType": "flow"
-                }
-              ],
               "textarea": "txt_ch1_v",
               "mode": "NUMBER"
             }
@@ -1771,8 +1836,7 @@
                 }
               }
             }
-          },
-          "eventHandlers": []
+          }
         },
         {
           "objID": "d85c038c-caf8-4de2-b3b5-59013dde07a6",
@@ -2132,9 +2196,12 @@
           "customOutputs": [],
           "style": {
             "objID": "9e8ec68d-f4b5-44a9-85dd-8dfe5e8f5066",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -2151,10 +2218,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "a0c325a8-93df-4962-88e7-18b25a1b4e54",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -2171,10 +2247,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "identifier": "lbl_CH1_STATUS",
                   "leftUnit": "px",
                   "topUnit": "px",
@@ -2192,7 +2271,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "CH1 ON",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -2227,14 +2305,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "a0c325a8-93df-4962-88e7-18b25a1b4e54",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "b1f15726-b45c-427c-a58b-5278168854f7",
@@ -2247,10 +2318,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "04ad77a0-d782-4bbf-841b-dc2187884d38",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -2267,10 +2347,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "identifier": "lbl_CH2_STATUS",
                   "leftUnit": "px",
                   "topUnit": "px",
@@ -2288,7 +2371,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "CH2 ON",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -2323,14 +2405,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "04ad77a0-d782-4bbf-841b-dc2187884d38",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "279b158a-b75d-408a-9f2a-aa8dc539b403",
@@ -2343,9 +2418,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_CH1_V",
               "leftUnit": "px",
               "topUnit": "px",
@@ -2375,7 +2453,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "CH1_V + \" V\"",
               "textType": "expression",
               "longMode": "WRAP",
@@ -2392,9 +2469,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_CH1_A",
               "leftUnit": "px",
               "topUnit": "px",
@@ -2424,7 +2504,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "CH1_A + \" A\"",
               "textType": "expression",
               "longMode": "WRAP",
@@ -2441,9 +2520,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_CH2_V",
               "leftUnit": "px",
               "topUnit": "px",
@@ -2473,7 +2555,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "CH2_V + \" V\"",
               "textType": "expression",
               "longMode": "WRAP",
@@ -2490,9 +2571,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_CH2_A",
               "leftUnit": "px",
               "topUnit": "px",
@@ -2522,7 +2606,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "CH2_A + \" A\"",
               "textType": "expression",
               "longMode": "WRAP",
@@ -2539,11 +2622,20 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": true,
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -2560,10 +2652,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -2580,7 +2675,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Back",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -2610,14 +2704,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "f6254d2c-747b-407c-fb41-dcca01b22b26",
@@ -2630,11 +2717,20 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": true,
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -2651,10 +2747,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -2671,7 +2770,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Set values",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -2701,14 +2799,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "1c59f250-0574-49d4-b575-fcff5d3e2eca",
@@ -2721,9 +2812,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -2741,7 +2835,6 @@
               "localStyles": {
                 "objID": "842b9f74-24e8-4126-a59e-ec86d37448b4"
               },
-              "eventHandlers": [],
               "text": "BB3_RESPONSE",
               "textType": "expression",
               "longMode": "WRAP",
@@ -2758,9 +2851,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "fdb932be-e9a7-4fb2-ccdc-08279d52a02a",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -2778,7 +2874,6 @@
               "localStyles": {
                 "objID": "842b9f74-24e8-4126-a59e-ec86d37448b4"
               },
-              "eventHandlers": [],
               "text": "BB3 response:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -2806,8 +2901,7 @@
                 }
               }
             }
-          },
-          "eventHandlers": []
+          }
         },
         {
           "objID": "5b303499-0bd7-4e96-d046-2f7a2a27b010",
@@ -3077,9 +3171,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3096,7 +3193,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "Voltage:",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3113,9 +3209,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3132,7 +3231,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "Voltage:",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3149,9 +3247,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3168,7 +3269,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "Current:",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3185,9 +3285,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3204,7 +3307,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "Current:",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3221,9 +3323,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3240,7 +3345,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "CH1 Status",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3257,9 +3361,12 @@
           "customOutputs": [],
           "style": {
             "objID": "a24d754d-e721-4248-d65e-2b1fe70d155f",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "content",
@@ -3276,7 +3383,6 @@
           "localStyles": {
             "objID": "62944e0b-892b-404c-f9da-010355784c82"
           },
-          "eventHandlers": [],
           "text": "CH2 Status",
           "textType": "literal",
           "longMode": "WRAP",
@@ -3441,9 +3547,12 @@
           "customOutputs": [],
           "style": {
             "objID": "9e8ec68d-f4b5-44a9-85dd-8dfe5e8f5066",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -3460,9 +3569,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "a19eb648-81d3-47d3-a3d0-0610df25fa94",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_conn_status",
               "leftUnit": "px",
               "topUnit": "px",
@@ -3480,7 +3592,6 @@
               "localStyles": {
                 "objID": "709ced4b-fd96-46cc-a06a-40dde4691efe"
               },
-              "eventHandlers": [],
               "text": "WIFI_IP",
               "textType": "expression",
               "longMode": "WRAP",
@@ -3497,10 +3608,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "c98820f2-7aee-4d51-c8a1-ba1c6f4508c5",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -3517,10 +3637,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -3537,7 +3660,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Reconnect",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -3568,14 +3690,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "c98820f2-7aee-4d51-c8a1-ba1c6f4508c5",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "7f742a70-9f6e-4040-ffde-b78b6149d6fc",
@@ -3588,9 +3703,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -3607,7 +3725,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "SSID:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -3624,10 +3741,13 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": false,
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -3644,7 +3764,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "Password:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -3661,9 +3780,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "499f3e03-b4e0-45e5-9f42-ab001dd95d0d",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "0a76ba6a-557f-47d0-df5e-70f6cc884b7a",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "a088d39e-4367-40a9-8b00-2fafc33f770d",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_ssid",
               "leftUnit": "px",
               "topUnit": "px",
@@ -3695,18 +3828,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "0a76ba6a-557f-47d0-df5e-70f6cc884b7a",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "a088d39e-4367-40a9-8b00-2fafc33f770d",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "WIFI_SSID",
               "textType": "expression",
               "placeholder": "",
@@ -3726,9 +3847,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "499f3e03-b4e0-45e5-9f42-ab001dd95d0d",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "699ff9a9-ecf6-4b69-ee14-c730a23e4f49",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "a112baef-e3a9-4cf2-e09b-e1a5aa1d4dc8",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_pass",
               "leftUnit": "px",
               "topUnit": "px",
@@ -3760,18 +3895,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "699ff9a9-ecf6-4b69-ee14-c730a23e4f49",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "a112baef-e3a9-4cf2-e09b-e1a5aa1d4dc8",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "WIFI_PASS",
               "textType": "expression",
               "placeholder": "",
@@ -3791,10 +3914,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -3811,10 +3943,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -3831,7 +3966,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Back",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -3861,14 +3995,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "e8cad47b-6819-4964-c9c6-74ccf4410aae",
@@ -3881,10 +4008,13 @@
               "customOutputs": [],
               "style": {
                 "objID": "45e6e1be-bbd7-43e6-b31d-ea0bfebbd0ea",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "kbd_setupWifi",
               "leftUnit": "px",
               "topUnit": "px",
@@ -3924,7 +4054,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "textarea": "txt_pass",
               "mode": "TEXT_LOWER"
             },
@@ -3939,10 +4068,13 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": false,
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -3959,7 +4091,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "Current IP: ",
               "textType": "literal",
               "longMode": "WRAP",
@@ -3976,9 +4107,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "a19eb648-81d3-47d3-a3d0-0610df25fa94",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "lbl_conn_status (1)",
               "leftUnit": "px",
               "topUnit": "px",
@@ -3996,7 +4130,6 @@
               "localStyles": {
                 "objID": "709ced4b-fd96-46cc-a06a-40dde4691efe"
               },
-              "eventHandlers": [],
               "text": "WIFI_CONNECTED",
               "textType": "expression",
               "longMode": "WRAP",
@@ -4013,10 +4146,13 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "locked": false,
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -4033,7 +4169,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "Status:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -4061,8 +4196,7 @@
                 }
               }
             }
-          },
-          "eventHandlers": []
+          }
         },
         {
           "objID": "0348c977-37c5-457b-f532-0bd94b2c9990",
@@ -4300,9 +4434,12 @@
           "customOutputs": [],
           "style": {
             "objID": "9e8ec68d-f4b5-44a9-85dd-8dfe5e8f5066",
-            "inheritFrom": "default"
+            "useStyle": "default",
+            "conditionalStyles": [],
+            "childStyles": []
           },
           "timeline": [],
+          "eventHandlers": [],
           "leftUnit": "px",
           "topUnit": "px",
           "widthUnit": "px",
@@ -4319,9 +4456,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -4339,7 +4479,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "Connected:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -4356,9 +4495,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -4375,7 +4517,6 @@
               "localStyles": {
                 "objID": "785af61c-eff4-48ed-95fe-35b53120d4b0"
               },
-              "eventHandlers": [],
               "text": "BB3 IP:",
               "textType": "literal",
               "longMode": "WRAP",
@@ -4392,9 +4533,23 @@
               "customOutputs": [],
               "style": {
                 "objID": "499f3e03-b4e0-45e5-9f42-ab001dd95d0d",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "8971a491-f747-4ec8-b077-604a0dc1e3e1",
+                  "eventName": "FOCUSED",
+                  "handlerType": "flow"
+                },
+                {
+                  "objID": "06927ed7-ab34-48f8-8b68-d4e96c548cb8",
+                  "eventName": "DEFOCUSED",
+                  "handlerType": "flow"
+                }
+              ],
               "identifier": "txt_bb3_ip",
               "leftUnit": "px",
               "topUnit": "px",
@@ -4427,18 +4582,6 @@
                   }
                 }
               },
-              "eventHandlers": [
-                {
-                  "objID": "8971a491-f747-4ec8-b077-604a0dc1e3e1",
-                  "trigger": "FOCUSED",
-                  "handlerType": "flow"
-                },
-                {
-                  "objID": "06927ed7-ab34-48f8-8b68-d4e96c548cb8",
-                  "trigger": "DEFOCUSED",
-                  "handlerType": "flow"
-                }
-              ],
               "text": "BB3_IP",
               "textType": "expression",
               "placeholder": "",
@@ -4458,10 +4601,19 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [
+                {
+                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
+                  "eventName": "PRESSED",
+                  "handlerType": "flow"
+                }
+              ],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -4478,10 +4630,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -4498,7 +4653,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Back",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -4528,14 +4682,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": [
-                {
-                  "objID": "b7514a79-7b1c-4e07-b201-2f15d2375142",
-                  "trigger": "PRESSED",
-                  "handlerType": "flow"
-                }
-              ]
+              }
             },
             {
               "objID": "beeb9cb6-195e-4f0f-b022-e1ed8017cf97",
@@ -4548,9 +4695,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "45e6e1be-bbd7-43e6-b31d-ea0bfebbd0ea",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "identifier": "kbd_setupBB3",
               "leftUnit": "px",
               "topUnit": "px",
@@ -4590,7 +4740,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "textarea": "txt_bb3_ip",
               "mode": "NUMBER"
             },
@@ -4605,9 +4754,12 @@
               "customOutputs": [],
               "style": {
                 "objID": "2574441e-6125-49fb-9738-c74f0c147db8",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "content",
@@ -4633,7 +4785,6 @@
                   }
                 }
               },
-              "eventHandlers": [],
               "text": "BB3_CONNECTED",
               "textType": "expression",
               "longMode": "WRAP",
@@ -4650,10 +4801,13 @@
               "customOutputs": [],
               "style": {
                 "objID": "272dba2b-2c8a-449e-bd60-f524e7dd0686",
-                "inheritFrom": "default"
+                "useStyle": "default",
+                "conditionalStyles": [],
+                "childStyles": []
               },
               "hiddenInEditor": false,
               "timeline": [],
+              "eventHandlers": [],
               "leftUnit": "px",
               "topUnit": "px",
               "widthUnit": "px",
@@ -4670,10 +4824,13 @@
                   "customOutputs": [],
                   "style": {
                     "objID": "e63c8b12-681b-4c24-e1bf-c2f6e788a803",
-                    "inheritFrom": "default"
+                    "useStyle": "default",
+                    "conditionalStyles": [],
+                    "childStyles": []
                   },
                   "hiddenInEditor": false,
                   "timeline": [],
+                  "eventHandlers": [],
                   "leftUnit": "px",
                   "topUnit": "px",
                   "widthUnit": "content",
@@ -4690,7 +4847,6 @@
                   "localStyles": {
                     "objID": "4505cd13-229f-489e-cf6d-ff6d85ef8ed0"
                   },
-                  "eventHandlers": [],
                   "text": "Set IP",
                   "textType": "literal",
                   "longMode": "WRAP",
@@ -4720,8 +4876,7 @@
                     }
                   }
                 }
-              },
-              "eventHandlers": []
+              }
             }
           ],
           "flags": "PRESS_LOCK|CLICK_FOCUSABLE|GESTURE_BUBBLE|SNAPPABLE|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_CHAIN",
@@ -4745,8 +4900,7 @@
                 }
               }
             }
-          },
-          "eventHandlers": []
+          }
         },
         {
           "objID": "f45a665c-8c46-4286-e846-3180b05cd3fe",
@@ -4884,6 +5038,7 @@
       }
     }
   ],
+  "userWidgets": [],
   "fonts": [
     {
       "objID": "6c6b8246-1ccc-49b9-aaa3-148eaa5b13b0",
